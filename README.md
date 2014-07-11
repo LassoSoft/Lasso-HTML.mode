@@ -14,6 +14,10 @@ Download/extract the zip or clone this repo, rename to `Lasso-HTML.mode`, and
 drop into `~/Library/Application Support/Coda 2/Modes`. If that folder doesn't
 exist, create it.
 
+Then, have Coda use the mode either by opening its Preferences and assigning the
+".lasso" extension to Lasso-HTML under Editor > Custom Syntax Modes, or
+opening up the application package and removing the old LassoScript-HTML mode
+from Contents > Resources.
 
 Features
 --------
