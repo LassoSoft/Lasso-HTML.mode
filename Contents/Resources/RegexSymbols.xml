@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "symbol.dtd">
+<symbols>
+
+	<!-- //- mark Marker -->
+	<symbol id="Marker" font-weight="bold" show-in-comments="yes">
+		<regex>//(?:- mark|!)[ \t]*(?:-(?=[ \t]*[\n\r]))?(.*)</regex>
+	</symbol>
+
+	<!-- // TODO: Reminder -->
+	<symbol id="Reminder" image="SymbolMark" font-style="italic" show-in-comments="yes">
+		<regex>/[/*]\s*[A-Z]+:[ \t]+(\S.*?)(?:\*/|[\n\r])</regex>
+	</symbol>
+
+	<!-- // FIXME! Important -->
+	<symbol id="Important" image="SymbolWarn" font-style="italic" show-in-comments="yes">
+		<regex>/[/*]\s*[A-Z]+![ \t]+(\S.*?)(?:\*/|[\n\r])</regex>
+	</symbol>
+
+	<!-- Versioning Conflict -->
+	<symbol id="Versioning Conflict" image="Symbol!" font-weight="bold" show-in-comments="yes">
+		<regex>[\n\r]&lt;&lt;&lt;&lt;&lt;&lt;&lt;(?:[\n\r]|.)*?(={6,}[\n\r])(?:[\n\r]|.)*?&gt;&gt;&gt;&gt;&gt;&gt;&gt;</regex>
+		<postprocess>
+			<find>=+[\n\r]</find>
+			<replace>Versioning conflict!</replace>
+		</postprocess>
+	</symbol>
+
+	<!-- include('name') -->
+	<symbol id="language.include" image="Symbol#">
+		<regex>(?i)\b(?:(?:include|library)(?:_once)?|lassoapp_include(?:_current)?)\s*[:(]\s*['"`]([^'"`]+)</regex>
+		<postprocess>
+			<find>[\s'"`]|[^/]*?/</find>
+			<replace></replace>
+		</postprocess>
+	</symbol>
+
+	<!-- Namespace_Using('name') -->
+	<symbol id="language.namespace.lassoscript" image="SymbolGroup">
+		<regex>(?i)namespace_using\s*[:(]\s*(['"\w.]+)</regex>
+		<postprocess>
+			<find>['"]</find>
+			<replace></replace>
+		</postprocess>
+	</symbol>
+
+	<!-- Define_Type('typename', ...) -->
+	<symbol id="language.class.lassoscript" image="SymbolC" useforautocomplete="yes">
+		<regex>(?i)define_type\s*[:(]\s*(['"\w.]+)</regex>
+		<postprocess>
+			<find>['"]</find>
+			<replace></replace>
+		</postprocess>
+	</symbol>
+
+	<!-- Define_Tag('tagname', ...) -->
+	<symbol id="language.function.lassoscript" image="SymbolF()" useforautocomplete="yes">
+		<regex>(?i)define_tag\s*[:(]\s*((?:.|[\n\r])+?;)\s*(?:/|[\n\r])</regex>
+		<postprocess>
+			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|[\s'"();]</find>
+			<replace></replace>
+			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=((?:.|[\n\r])+)</find>
+			<replace>(\1)</replace>
+			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=</find>
+			<replace>, </replace>
+			<find>,-[^)]+</find>
+			<replace></replace>
+		</postprocess>
+	</symbol>
+
+	<!-- define typename => type -->
+	<symbol id="language.class.lasso" image="SymbolC" useforautocomplete="yes">
+		<regex>(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*(?:type|thread)</regex>
+	</symbol>
+
+	<!-- define traitname => trait -->
+	<symbol id="language.trait.lasso" image="SymbolT" useforautocomplete="yes">
+		<regex>(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*trait</regex>
+	</symbol>
+
+	<!-- define method(...) => -->
+	<symbol id="language.function.lasso" image="SymbolF()" useforautocomplete="yes">
+		<regex>(?i)define\s+([a-z_][\w.]*\s*(?:\((?:.|[\n\r])*?=&gt;|=&gt;(?!\s*(?:type|trait|thread))))</regex>
+		<postprocess>
+			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
+			<replace></replace>
+			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
+			<replace></replace>
+			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)*([,)])</find>
+			<replace>\1</replace>
+			<find>,</find>
+			<replace>, </replace>
+		</postprocess>
+	</symbol>
+
+	<!-- define typename->method(...) => -->
+	<symbol id="language.method.external.lasso" image="SymbolE" useforautocomplete="yes">
+		<regex>(?i)define\s+([a-z_][\w.]*\s*-&gt;\s*(?:[a-z_][\w.]*=?|[-+*/%])\s*(?:\((?:.|[\n\r])*?)?=&gt;)</regex>
+		<postprocess>
+			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
+			<replace></replace>
+			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
+			<replace></replace>
+			<find>(?i)(-&gt;[a-z_][\w.]*)=</find>
+			<replace>\1@</replace>
+			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)?([,)])</find>
+			<replace>\1</replace>
+			<find>@</find>
+			<replace>=</replace>
+			<find>,</find>
+			<replace>, </replace>
+			<find>-&gt;([-+*/%])</find>
+			<replace>-&gt; \1 </replace>
+		</postprocess>
+	</symbol>
+
+	<!-- public method(...) => -->
+	<symbol id="language.method.lasso" image="SymbolM" indentation="1" useforautocomplete="yes">
+		<regex>(?i)(?:public|protected|private|provide|\}\s*,)\s+((?:[a-z_][\w.]*=?|[-+*/%])\s*(?:\((?:.|[\n\r])*?)?=&gt;)</regex>
+		<postprocess>
+			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
+			<replace></replace>
+			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
+			<replace></replace>
+			<find>(?i)(\A[a-z_][\w.]*)=</find>
+			<replace>\1@</replace>
+			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)*([,)])</find>
+			<replace>\1</replace>
+			<find>@</find>
+			<replace>=</replace>
+			<find>(\A[-+*/%]|,)</find>
+			<replace>\1 </replace>
+		</postprocess>
+	</symbol>
+
+	<!-- variable autocompletion -->
+	<symbol id="language.variable.lasso" hidden="yes" useforautocomplete="yes">
+		<regex>(?i)([#$][a-z_][\w.]*)</regex>
+		<regex>(?i)((?:local|var(?:iable)?)[\s:('"`]+[a-z_][\w.]*)</regex>
+		<postprocess>
+			<find>[\s:('"`]+</find>
+			<replace> </replace>
+			<find>(?i)\Alocal </find>
+			<replace>#</replace>
+			<find>(?i)\Avar(?:iable)? </find>
+			<replace>$</replace>
+		</postprocess>
+	</symbol>
+
+	<!-- trait autocompletion -->
+	<symbol id="language.trait.import.lasso" hidden="yes" useforautocomplete="yes">
+		<regex>(?i)import\s+([a-z_][\w.]*)</regex>
+	</symbol>
+
+</symbols>

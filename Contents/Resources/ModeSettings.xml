@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE syntax SYSTEM "settings.dtd">
+<settings>
+	<recognition>
+		<extension>lasso</extension>
+		<extension>las</extension>
+		<extension>incl</extension>
+		<regex>\A#![ \S]+lasso9\b</regex>
+		<regex>(?i)&lt;\?(Lasso(Script)?|=)</regex>
+		<regex>\A\s*\[[^\[]</regex>
+	</recognition>
+	<color>0.471, 0.686, 0.918</color>
+</settings>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>comment.block</key>
+		<string>/* Comment */</string>
+		<key>comment.block.documentation</key>
+		<string>/**! Doc Comment */</string>
+		<key>comment.line</key>
+		<string>// comment</string>
+		<key>constant.numeric</key>
+		<string>0 15 0x4a 0713 3.14</string>
+		<key>constant.numeric.keyword</key>
+		<string>true false infinity NaN</string>
+		<key>keyword</key>
+		<string>inline records handle protect</string>
+		<key>keyword.error</key>
+		<string>Error_AddError error_msg_nopermission</string>
+		<key>keyword.variable</key>
+		<string>local var data</string>
+		<key>language.function</key>
+		<string>my_function_call() ..parent_method</string>
+		<key>language.function.builtin</key>
+		<string>datasource_register encode_xml client_postparam</string>
+		<key>language.operator.keyword</key>
+		<string>and or not</string>
+		<key>language.property</key>
+		<string>-caseSensitive</string>
+		<key>language.variable</key>
+		<string>#local $thread</string>
+		<key>language.variable.string</key>
+		<string>::tag</string>
+		<key>markup.comment</key>
+		<string>&lt;!-- SGML Comment --&gt; &lt;?lasso ?&gt;</string>
+		<key>markup.tag</key>
+		<string>&lt;document&gt; &lt;br/&gt;</string>
+		<key>markup.tag.attribute.name</key>
+		<string>href id class</string>
+		<key>markup.tag.attribute.value.string</key>
+		<string>"left" "utf-8"</string>
+		<key>meta.default</key>
+		<string>Default Text</string>
+		<key>meta.highlight.currentline</key>
+		<string>-</string>
+		<key>meta.invisible.character</key>
+		<string>¶ .</string>
+		<key>meta.link</key>
+		<string>http://apple.com www.panic.com</string>
+		<key>meta.link.email</key>
+		<string>steve@apple.com</string>
+		<key>string.single.backtick</key>
+		<string>`lorem ipsum`</string>
+		<key>string.double</key>
+		<string>"lorem ipsum"</string>
+		<key>string.single</key>
+		<string>'lorem ipsum'</string>
+		<key>support.type</key>
+		<string>array date integer map string zip_file</string>
+		<key>support.type.trait</key>
+		<string>trait_asstring any queriable_asstring</string>
+	</dict>
+</plist>

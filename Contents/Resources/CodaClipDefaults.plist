@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Title</key>
+	<string>Lasso-HTML</string>
+	<key>Clips</key>
+	<array>
+
+		<dict> <!-- Syntax group -->
+			<key>Title</key>
+			<string>Syntax</string>
+			<key>Clips</key>
+			<array>
+
+				<!-- Local variable -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Local variable</string>
+					<key>Trigger</key>
+					<string>lvar</string>
+					<key>Content</key>
+					<string>local(name::type = expression)</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{6, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{12, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{19, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Thread variable -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Thread variable</string>
+					<key>Trigger</key>
+					<string>tvar</string>
+					<key>Content</key>
+					<string>var(name::type = expression)</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{4, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{10, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{17, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Conditional operator -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Conditional operator</string>
+					<key>Trigger</key>
+					<string>?</string>
+					<key>Content</key>
+					<string>? expression_true | expression_false</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{2, 15}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{20, 16}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Association block -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Association block</string>
+					<key>Trigger</key>
+					<string>=></string>
+					<key>Content</key>
+					<string>=> {&#xA;	Insertion Point&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{6, 15}</string>
+							<key>Type</key>
+							<integer>9</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Auto-collect capture -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Auto-collect capture</string>
+					<key>Trigger</key>
+					<string>^</string>
+					<key>Content</key>
+					<string>{^&#xA;	Insertion Point&#xA;^}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{4, 15}</string>
+							<key>Type</key>
+							<integer>9</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Block comment -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Block comment</string>
+					<key>Trigger</key>
+					<string>/*</string>
+					<key>Content</key>
+					<string>/* Comment */</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{3, 7}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Doc comment -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Doc comment</string>
+					<key>Trigger</key>
+					<string>/**</string>
+					<key>Content</key>
+					<string>/**!&#xA;	Description&#xA;*/</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{6, 11}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+			</array>
+		</dict> <!-- Syntax group -->
+
+		<dict> <!-- Control Flow group -->
+			<key>Title</key>
+			<string>Control Flow</string>
+			<key>Clips</key>
+			<array>
+
+				<!-- If statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>If statement</string>
+					<key>Trigger</key>
+					<string>if</string>
+					<key>Content</key>
+					<string>if(expression) => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{3, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{21, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Else condition -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Else condition</string>
+					<key>Trigger</key>
+					<string>else</string>
+					<key>Content</key>
+					<string>else(expression)&#xA;	code</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{5, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{18, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Match statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Match statement</string>
+					<key>Trigger</key>
+					<string>match</string>
+					<key>Content</key>
+					<string>match(expression) => {&#xA;case(result)&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{6, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{28, 6}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{37, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Case condition -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Case condition</string>
+					<key>Trigger</key>
+					<string>case</string>
+					<key>Content</key>
+					<string>case(result)&#xA;	code</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{5, 6}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{14, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- While statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>While statement</string>
+					<key>Trigger</key>
+					<string>while</string>
+					<key>Content</key>
+					<string>while(expression) => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{6, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{24, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Loop statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Loop statement</string>
+					<key>Trigger</key>
+					<string>loop</string>
+					<key>Content</key>
+					<string>loop(to, from, by) => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{5, 2}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{9, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{15, 2}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{25, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Iterate statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Iterate statement</string>
+					<key>Trigger</key>
+					<string>iterate</string>
+					<key>Content</key>
+					<string>iterate(forEach) => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{8, 7}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{23, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Protect block -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Protect block</string>
+					<key>Trigger</key>
+					<string>protect</string>
+					<key>Content</key>
+					<string>protect => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{14, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Handle statement -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Handle statement</string>
+					<key>Trigger</key>
+					<string>handle</string>
+					<key>Content</key>
+					<string>handle(expression) => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{7, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{25, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Handle Failure block -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Handle Failure block</string>
+					<key>Trigger</key>
+					<string>hfail</string>
+					<key>Content</key>
+					<string>handle_failure => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{21, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+			</array>
+		</dict> <!-- Control Flow group -->
+
+		<dict> <!-- Definitions group -->
+			<key>Title</key>
+			<string>Definitions</string>
+			<key>Clips</key>
+			<array>
+
+				<!-- Object definition -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Object definition</string>
+					<key>Trigger</key>
+					<string>define</string>
+					<key>Content</key>
+					<string>define object => type|trait|thread {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{7, 6}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{17, 17}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{38, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Method definition -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Method definition</string>
+					<key>Trigger</key>
+					<string>mdefine</string>
+					<key>Content</key>
+					<string>method(parameters)::type => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{0, 6}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{7, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{20, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+						<dict>
+							<key>Range</key>
+							<string>{31, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Trait Import block -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Trait Import block</string>
+					<key>Trigger</key>
+					<string>tblock</string>
+					<key>Content</key>
+					<string>trait => {&#xA;	import trait_name&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{19, 10}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+				<!-- Split Thread block -->
+				<dict>
+					<key>Versions</key>
+					<array/>
+					<key>Title</key>
+					<string>Split Thread block</string>
+					<key>Trigger</key>
+					<string>sthread</string>
+					<key>Content</key>
+					<string>split_thread => {&#xA;	code&#xA;}</string>
+					<key>Placeholders</key>
+					<array>
+						<dict>
+							<key>Range</key>
+							<string>{19, 4}</string>
+							<key>Type</key>
+							<integer>12</integer>
+						</dict>
+					</array>
+				</dict>
+
+			</array>
+		</dict> <!-- Definitions group -->
+
+	</array>
+</dict>
+</plist>
