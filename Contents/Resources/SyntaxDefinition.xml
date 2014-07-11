@@ -222,7 +222,7 @@
 			<state-link mode="HTML" state="JavaScript Container"/>
 
 			<!-- Lasso delimiters container -->
-			<state id="Lasso Delimiters" containerState="yes" scope="meta.default">
+			<state id="Lasso Delimiters" containerState="yes" scope="markup.comment">
 				<keywords id="Delimiters" casesensitive="no" useforautocomplete="no" scope="markup.comment">
 					<string>[no_square_brackets]</string>
 					<string>[noprocess]</string>
