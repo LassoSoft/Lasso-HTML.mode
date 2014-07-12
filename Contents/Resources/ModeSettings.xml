@@ -9,5 +9,5 @@
 		<regex>(?i)&lt;\?(Lasso(Script)?|=)</regex>
 		<regex>\A\s*\[[^\[]</regex>
 	</recognition>
-	<color>0.471, 0.686, 0.918</color>
+	<color>0.541, 0.584, 0.933</color>
 </settings>

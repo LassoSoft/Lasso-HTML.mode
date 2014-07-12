@@ -17,7 +17,7 @@ exist, create it.
 Then, have Coda use the mode either by opening its Preferences and assigning the
 ".lasso" extension to Lasso-HTML under Editor > Custom Syntax Modes, or
 opening up the application package and removing the old LassoScript-HTML mode
-from Contents > Resources.
+from `Contents/Resources/`.
 
 Features
 --------
@@ -123,8 +123,8 @@ highlighter far more complex.)
   block or braces block.
 
 - The highlighter will mark everything as Lasso as soon as it encounters valid
-Lasso code outside delimiters anywhere in the file, rather than only at the
-beginning. This is due to limitations of the highlighter's state system.
+Lasso code outside delimiters anywhere in the file, rather than only checking at
+the beginning. This is due to limitations of the highlighter's state system.
 
 - A JavaScript action attribute (e.g. `onClick`) or `href` or `src` inside an
 HTML tag will be highlighted incorrectly if its value contains a Lasso delimiter
