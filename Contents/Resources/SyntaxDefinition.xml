@@ -274,7 +274,7 @@
 
 				<!-- numerals -->
 				<keywords id="Numerals" useforautocomplete="no" scope="constant.numeric">
-					<regex>(?i)((?&lt;![\w.])(?:(?:\d+\.|\.)\d+(?:e[-+]?\d+)?|0x[\da-f]+|\d+))</regex>
+					<regex>(?i)((?&lt;![\w.])(?:\d*\.\d+(?:e[-+]?\d+)?|0x[\da-f]+|\d+))</regex>
 				</keywords>
 
 				<!-- logical/numeric constants -->
