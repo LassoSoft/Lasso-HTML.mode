@@ -12,56 +12,203 @@
 	<states>
 		<default id="Base" usesymbolsfrommode="HTML" useautocompletefrommode="HTML" usespellchecking="yes" scope="meta.default">
 
-			<import mode="XML" keywords-only="yes"/><!-- character entities -->
-			<state-link mode="XML" state="Comment"/><!-- delimiters inside HTML/XML comments are ignored -->
-
-			<!-- [no_square_brackets] -->
-			<state id="Disable Square Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
-				<begin><regex>\[no_square_brackets\]</regex></begin>
+			<!-- embedded -->
+			<state id="Lasso in Delimiters" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" scope="meta.default">
+				<begin><regex>\A\s*(?'trimmedstart'[&lt;\[]\S*)</regex></begin>
 				<end><regex>\Z</regex></end>
 
-				<import mode="XML" keywords-only="yes"/>
-				<state-link mode="XML" state="Comment"/>
-				<state-link state="Lasso Angle Delimiters"/>
+				<import mode="XML" keywords-only="yes"/><!-- character entities -->
+				<state-link mode="XML" state="Comment"/><!-- delimiters inside HTML/XML comments are ignored -->
+
+				<!-- [no_square_brackets] -->
+				<state id="Disable Square Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
+					<begin><regex>\[no_square_brackets\]</regex></begin>
+					<end><regex>\Z</regex></end>
+
+					<import mode="XML" keywords-only="yes"/>
+					<state-link mode="XML" state="Comment"/>
+					<state-link state="Lasso Angle Delimiters"/>
+					<state-link mode="XML" state="CDATA"/>
+					<state-link mode="XML" state="Doctype"/>
+					<state-link mode="XML" state="Escape"/>
+					<state-link state="Inline CSS NSB"/>
+					<state-link state="Inline JavaScript NSB"/>
+					<state-link state="Self Closing Tags"/>
+					<state-link state="Tags"/>
+				</state>
+
+				<!-- [noprocess] block -->
+				<state id="Disable Lasso Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
+					<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+					<end><regex>\[/noprocess\]</regex></end>
+
+					<import mode="XML" keywords-only="yes"/>
+					<state-link mode="XML" state="Comment"/>
+					<state-link mode="XML" state="CDATA"/>
+					<state-link mode="XML" state="Doctype"/>
+					<state-link mode="XML" state="Escape"/>
+					<state-link mode="HTML" state="Inline CSS"/>
+					<state-link mode="HTML" state="Inline JavaScript"/>
+					<state-link mode="HTML" state="Self Closing Tags"/>
+					<state-link mode="HTML" state="Tags"/>
+				</state>
+
+				<!-- square brackets -->
+				<state id="Lasso Square Delimiters" delimiterState="Lasso Delimiters" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" type="block" foldable="yes" indent="yes" scope="meta.default">
+					<begin><regex>\[</regex><autoend>]</autoend></begin>
+					<end><regex>\]</regex></end>
+
+					<import state="Lasso Code"/>
+				</state>
+
+				<!-- angle brackets -->
+				<state id="Lasso Angle Delimiters" delimiterState="Lasso Delimiters" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" type="block" foldable="yes" indent="yes" scope="meta.default">
+					<begin><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)</regex><autoend>?&gt;</autoend></begin>
+					<end><regex>\?&gt;</regex></end>
+
+					<import state="Lasso Code"/>
+				</state>
+
 				<state-link mode="XML" state="CDATA"/>
 				<state-link mode="XML" state="Doctype"/>
 				<state-link mode="XML" state="Escape"/>
-				<state-link state="Inline CSS NSB"/>
-				<state-link state="Inline JavaScript NSB"/>
-				<state-link state="Self Closing Tags"/>
-				<state-link state="Tags"/>
-			</state>
 
-			<!-- [noprocess] block -->
-			<state id="Disable Lasso Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
-				<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
-				<end><regex>\[/noprocess\]</regex></end>
+				<state id="Inline CSS" delimiterState="Tags" usesymbolsfrommode="CSS" useautocompletefrommode="CSS" foldable="yes" indent="yes" scope="meta.block.css">
+					<begin><regex>&lt;[ \t]*(?i)style[^>]*(?&lt;!\?)></regex><autoend>&lt;/style></autoend></begin>
+					<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
 
-				<import mode="XML" keywords-only="yes"/>
-				<state-link mode="XML" state="Comment"/>
-				<state-link mode="XML" state="CDATA"/>
-				<state-link mode="XML" state="Doctype"/>
-				<state-link mode="XML" state="Escape"/>
-				<state-link mode="HTML" state="Inline CSS"/>
-				<state-link mode="HTML" state="Inline JavaScript"/>
-				<state-link mode="HTML" state="Self Closing Tags"/>
-				<state-link mode="HTML" state="Tags"/>
-			</state>
+					<state-link state="Disable Square Delimiters"/>
+					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Lasso Square Delimiters"/>
+					<state-link state="Lasso Angle Delimiters"/>
+					<import mode="CSS"/>
+				</state>
 
-			<!-- square brackets -->
-			<state id="Lasso Square Delimiters" delimiterState="Lasso Delimiters" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" type="block" foldable="yes" indent="yes" scope="meta.default">
-				<begin><regex>\[</regex><autoend>]</autoend></begin>
-				<end><regex>\]</regex></end>
+				<state id="Inline CSS NSB" delimiterState="Tags" usesymbolsfrommode="CSS" useautocompletefrommode="CSS" foldable="yes" indent="yes" scope="meta.block.css">
+					<begin><regex>&lt;[ \t]*(?i)style[^>]*(?&lt;!\?)></regex><autoend>&lt;/style></autoend></begin>
+					<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
 
-				<import state="Lasso Code"/>
-			</state>
+					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Lasso Angle Delimiters"/>
+					<import mode="CSS"/>
+				</state>
 
-			<!-- angle brackets -->
-			<state id="Lasso Angle Delimiters" delimiterState="Lasso Delimiters" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" type="block" foldable="yes" indent="yes" scope="meta.default">
-				<begin><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)</regex><autoend>?&gt;</autoend></begin>
-				<end><regex>\?&gt;</regex></end>
+				<state id="Inline JavaScript" delimiterState="Tags" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" foldable="yes" indent="yes" scope="meta.block.js">
+					<begin><regex>(?:&lt;[ \t]*(?i)script\s*?>)|(?:&lt;[ \t]*(?i)script.+?javascript.*?(?&lt;![-?])>)</regex><autoend>&lt;/script></autoend></begin>
+					<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
 
-				<import state="Lasso Code"/>
+					<state-link state="Disable Square Delimiters"/>
+					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Lasso Square Delimiters"/>
+					<state-link state="Lasso Angle Delimiters"/>
+					<import mode="JavaScript"/>
+				</state>
+
+				<state id="Inline JavaScript NSB" delimiterState="Tags" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" foldable="yes" indent="yes" scope="meta.block.js">
+					<begin><regex>(?:&lt;[ \t]*(?i)script\s*?>)|(?:&lt;[ \t]*(?i)script.+?javascript.*?(?&lt;![-?])>)</regex><autoend>&lt;/script></autoend></begin>
+					<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
+
+					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Lasso Angle Delimiters"/>
+					<import mode="JavaScript"/>
+				</state>
+
+				<state id="Self Closing Tags" foldable="no" scope="markup.tag">
+					<begin><regex>&lt;[ \t]*(?i)(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)</regex></begin>
+					<end><regex>&gt;</regex></end>
+
+					<import state="Tags"/>
+				</state>
+
+				<state id="Tags" usespellchecking="no" foldState="Foldable Tags" scope="markup.tag">
+					<begin><regex>&lt;</regex></begin>
+					<end><regex>&gt;</regex></end>
+
+					<state id="Javascript Actions" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="markup.tag.attribute.name" >
+						<begin><regex>(?&lt;=[ \t])(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
+						<end><regex>"</regex></end>
+
+						<keywords id="Action Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
+							<regex>\A([\w-]+)[ \t]*=</regex>
+						</keywords>
+
+						<keywords id="Action Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
+							<regex>(")</regex>
+						</keywords>
+
+						<keywords id="Action Equals" useforautocomplete="no" scope="markup.tag">
+							<regex>\A(?i)on[\w-]+([ \t]*=[ \t]*)</regex>
+						</keywords>
+
+						<state-link state="Disable Lasso Delimiters"/>
+						<state-link state="Lasso Square Delimiters"/>
+						<state-link state="Lasso Angle Delimiters"/>
+						<import mode="JavaScript" keywords-only="yes"/>
+						<import state="JavaScript Container"/>
+					</state>
+
+					<state id="Links" type="url" scope="markup.tag.attribute.name">
+						<begin><regex>(?&lt;=[ \t])(?i)(?:href|src)[ \t]*=[ \t]*"</regex></begin>
+						<end><regex>"</regex></end>
+
+						<state id="Javascript in Links" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
+							<begin><regex>\A[ \t]*(?i)javascript:</regex></begin>
+							<end><regex>(?'unwindend'")</regex></end>
+
+							<state-link state="Disable Lasso Delimiters"/>
+							<state-link state="Lasso Square Delimiters"/>
+							<state-link state="Lasso Angle Delimiters"/>
+							<import mode="JavaScript" keywords-only="yes"/>
+							<import state="JavaScript Container"/>
+						</state>
+
+						<keywords id="Link Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
+							<regex>\A(\w+)[ \t]*=</regex>
+						</keywords>
+
+						<keywords id="Link Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
+							<regex>(")</regex>
+						</keywords>
+
+						<keywords id="Link Equals" useforautocomplete="no" scope="markup.tag">
+							<regex>\A(?i)\w+([ \t]*=[ \t]*)</regex>
+						</keywords>
+
+						<state-link state="Disable Lasso Delimiters"/>
+						<state-link state="Lasso Square Delimiters"/>
+						<state-link state="Lasso Angle Delimiters"/>
+					</state>
+
+					<state id="Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
+						<begin><regex>"</regex></begin>
+						<end><regex>"</regex></end>
+
+						<state-link state="Disable Lasso Delimiters"/>
+						<state-link state="Lasso Square Delimiters"/>
+						<state-link state="Lasso Angle Delimiters"/>
+					</state>
+
+					<state id="Single Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
+						<begin><regex>'</regex></begin>
+						<end><regex>'</regex></end>
+
+						<state-link state="Disable Lasso Delimiters"/>
+						<state-link state="Lasso Square Delimiters"/>
+						<state-link state="Lasso Angle Delimiters"/>
+					</state>
+
+					<keywords id="Attributes in Tags" useforautocomplete="no" scope="markup.tag.attribute.name">
+						<regex>([\w-]*)(?=[ \t]*=)</regex>
+					</keywords>
+
+					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Lasso Square Delimiters"/>
+					<state-link state="Lasso Angle Delimiters"/>
+				</state>
+
+				<state-link mode="HTML" state="Foldable Tags"/>
+				<state-link mode="HTML" state="JavaScript Container"/>
+
 			</state>
 
 			<!-- shell script -->
@@ -74,152 +221,11 @@
 
 			<!-- library -->
 			<state id="Lasso Library File" delimiterState="Lasso Code" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" scope="meta.default">
-				<!-- assume that a comment, tag literal, capture block, or define statement appearing outside delimiters indicates a library file -->
-				<begin><regex>(?i)(?:\A|\s)//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|::\s*[a-z_][\w.]*|[a-z_][\w.]*\s*=&gt;\s*{|define\s+[a-z_][\w.]*\s*(?:[-=]&gt;|::\s*[a-z_][\w.]*|\()</regex></begin>
+				<begin><regex>\A\s*(?'trimmedstart2'\S+)</regex></begin>
 				<end><regex>\Z</regex></end>
 
 				<import state="Lasso Code"/>
 			</state>
-
-			<state-link mode="XML" state="CDATA"/>
-			<state-link mode="XML" state="Doctype"/>
-			<state-link mode="XML" state="Escape"/>
-
-			<state id="Inline CSS" delimiterState="Tags" usesymbolsfrommode="CSS" useautocompletefrommode="CSS" foldable="yes" indent="yes" scope="meta.block.css">
-				<begin><regex>&lt;[ \t]*(?i)style[^>]*(?&lt;!\?)></regex><autoend>&lt;/style></autoend></begin>
-				<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
-
-				<state-link state="Disable Square Delimiters"/>
-				<state-link state="Disable Lasso Delimiters"/>
-				<state-link state="Lasso Square Delimiters"/>
-				<state-link state="Lasso Angle Delimiters"/>
-				<import mode="CSS"/>
-			</state>
-
-			<state id="Inline CSS NSB" delimiterState="Tags" usesymbolsfrommode="CSS" useautocompletefrommode="CSS" foldable="yes" indent="yes" scope="meta.block.css">
-				<begin><regex>&lt;[ \t]*(?i)style[^>]*(?&lt;!\?)></regex><autoend>&lt;/style></autoend></begin>
-				<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
-
-				<state-link state="Disable Lasso Delimiters"/>
-				<state-link state="Lasso Angle Delimiters"/>
-				<import mode="CSS"/>
-			</state>
-
-			<state id="Inline JavaScript" delimiterState="Tags" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" foldable="yes" indent="yes" scope="meta.block.js">
-				<begin><regex>(?:&lt;[ \t]*(?i)script\s*?>)|(?:&lt;[ \t]*(?i)script.+?javascript.*?(?&lt;![-?])>)</regex><autoend>&lt;/script></autoend></begin>
-				<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
-
-				<state-link state="Disable Square Delimiters"/>
-				<state-link state="Disable Lasso Delimiters"/>
-				<state-link state="Lasso Square Delimiters"/>
-				<state-link state="Lasso Angle Delimiters"/>
-				<import mode="JavaScript"/>
-			</state>
-
-			<state id="Inline JavaScript NSB" delimiterState="Tags" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" foldable="yes" indent="yes" scope="meta.block.js">
-				<begin><regex>(?:&lt;[ \t]*(?i)script\s*?>)|(?:&lt;[ \t]*(?i)script.+?javascript.*?(?&lt;![-?])>)</regex><autoend>&lt;/script></autoend></begin>
-				<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
-
-				<state-link state="Disable Lasso Delimiters"/>
-				<state-link state="Lasso Angle Delimiters"/>
-				<import mode="JavaScript"/>
-			</state>
-
-			<state id="Self Closing Tags" foldable="no" scope="markup.tag">
-				<begin><regex>&lt;[ \t]*(?i)(?:area|base|br|col|command|embed|hr|img|input|keygen|link|meta|param|source|track|wbr)</regex></begin>
-				<end><regex>&gt;</regex></end>
-
-				<import state="Tags"/>
-			</state>
-
-			<state id="Tags" usespellchecking="no" foldState="Foldable Tags" scope="markup.tag">
-				<begin><regex>&lt;</regex></begin>
-				<end><regex>&gt;</regex></end>
-
-				<state id="Javascript Actions" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="markup.tag.attribute.name" >
-					<begin><regex>(?&lt;=[ \t])(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
-					<end><regex>"</regex></end>
-
-					<keywords id="Action Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-						<regex>\A([\w-]+)[ \t]*=</regex>
-					</keywords>
-
-					<keywords id="Action Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
-						<regex>(")</regex>
-					</keywords>
-
-					<keywords id="Action Equals" useforautocomplete="no" scope="markup.tag">
-						<regex>\A(?i)on[\w-]+([ \t]*=[ \t]*)</regex>
-					</keywords>
-
-					<state-link state="Disable Lasso Delimiters"/>
-					<state-link state="Lasso Square Delimiters"/>
-					<state-link state="Lasso Angle Delimiters"/>
-					<import mode="JavaScript" keywords-only="yes"/>
-					<import state="JavaScript Container"/>
-				</state>
-
-				<state id="Links" type="url" scope="markup.tag.attribute.name">
-					<begin><regex>(?&lt;=[ \t])(?i)(?:href|src)[ \t]*=[ \t]*"</regex></begin>
-					<end><regex>"</regex></end>
-
-					<state id="Javascript in Links" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
-						<begin><regex>\A[ \t]*(?i)javascript:</regex></begin>
-						<end><regex>(?'unwindend'")</regex></end>
-
-						<state-link state="Disable Lasso Delimiters"/>
-						<state-link state="Lasso Square Delimiters"/>
-						<state-link state="Lasso Angle Delimiters"/>
-						<import mode="JavaScript" keywords-only="yes"/>
-						<import state="JavaScript Container"/>
-					</state>
-
-					<keywords id="Link Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-						<regex>\A(\w+)[ \t]*=</regex>
-					</keywords>
-
-					<keywords id="Link Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
-						<regex>(")</regex>
-					</keywords>
-
-					<keywords id="Link Equals" useforautocomplete="no" scope="markup.tag">
-						<regex>\A(?i)\w+([ \t]*=[ \t]*)</regex>
-					</keywords>
-
-					<state-link state="Disable Lasso Delimiters"/>
-					<state-link state="Lasso Square Delimiters"/>
-					<state-link state="Lasso Angle Delimiters"/>
-				</state>
-
-				<state id="Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
-					<begin><regex>"</regex></begin>
-					<end><regex>"</regex></end>
-
-					<state-link state="Disable Lasso Delimiters"/>
-					<state-link state="Lasso Square Delimiters"/>
-					<state-link state="Lasso Angle Delimiters"/>
-				</state>
-
-				<state id="Single Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
-					<begin><regex>'</regex></begin>
-					<end><regex>'</regex></end>
-
-					<state-link state="Disable Lasso Delimiters"/>
-					<state-link state="Lasso Square Delimiters"/>
-					<state-link state="Lasso Angle Delimiters"/>
-				</state>
-
-				<keywords id="Attributes in Tags" useforautocomplete="no" scope="markup.tag.attribute.name">
-					<regex>([\w-]*)(?=[ \t]*=)</regex>
-				</keywords>
-
-				<state-link state="Disable Lasso Delimiters"/>
-				<state-link state="Lasso Square Delimiters"/>
-				<state-link state="Lasso Angle Delimiters"/>
-			</state>
-
-			<state-link mode="HTML" state="Foldable Tags"/>
-			<state-link mode="HTML" state="JavaScript Container"/>
 
 			<!-- Lasso delimiters container -->
 			<state id="Lasso Delimiters" containerState="yes" scope="markup.comment">

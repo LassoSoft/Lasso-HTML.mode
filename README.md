@@ -122,10 +122,6 @@ highlighter far more complex.)
   - `[no_square_brackets]` isn't recognized when it appears inside a container
   block or braces block.
 
-- The highlighter will mark everything as Lasso as soon as it encounters valid
-Lasso code outside delimiters anywhere in the file, rather than only checking at
-the beginning. This is due to limitations of the highlighter's state system.
-
 - A JavaScript action attribute (e.g. `onClick`) or `href` or `src` inside an
 HTML tag will be highlighted incorrectly if its value contains a Lasso delimiter
 block.
