@@ -29,10 +29,6 @@
 	<!-- include('name') -->
 	<symbol id="language.include" image="Symbol#">
 		<regex>(?i)\b(?:(?:include|library)(?:_once)?|lassoapp_include(?:_current)?)\s*[:(]\s*['"`]([^'"`]+)</regex>
-		<postprocess>
-			<find>[\s'"`]|[^/]*?/</find>
-			<replace></replace>
-		</postprocess>
 	</symbol>
 
 	<!-- Namespace_Using('name') -->
