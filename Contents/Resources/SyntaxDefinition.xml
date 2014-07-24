@@ -4,8 +4,7 @@
 
 	<head>
 		<name>Lasso-HTML</name>
-		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.#$']]></charsintokens>
-		<charsincompletion><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.#$/]]></charsincompletion>
+		<charsintokens><![CDATA[_0987654321abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.#$]]></charsintokens>
 		<folding toplevel="2"/>
 	</head>
 
@@ -228,13 +227,12 @@
 			</state>
 
 			<!-- Lasso delimiters container -->
-			<state id="Lasso Delimiters" containerState="yes" scope="markup.comment">
+			<state id="Lasso Delimiters" containerState="yes" scope="meta.default">
 				<keywords id="Delimiters" casesensitive="no" useforautocomplete="no" scope="markup.comment">
+					<regex>(\[|\])</regex>
 					<string>[no_square_brackets]</string>
 					<string>[noprocess]</string>
 					<string>[/noprocess]</string>
-					<string>[</string>
-					<string>]</string>
 					<string>&lt;?LassoScript</string>
 					<string>&lt;?lasso</string>
 					<string>&lt;?=</string>
