@@ -2879,7 +2879,7 @@
 				<keywords id="Methods" useforautocomplete="no" scope="language.function">
 					<regex>(?i)define\s+([a-z_][\w.]*\b)(?!\s*=&gt;\s*(?:type|trait|thread)|\s*-&gt;)</regex>
 					<regex>(?i)(?:public|protected|private|provide)\s+([a-z_][\w.]*\b=?|[-+*/%])</regex>
-					<regex>(?i)(?:(?&lt;!\.\.)\.|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
+					<regex>(?i)(?:(?&lt;![\w.])\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
 					<regex>(?i)(?&lt;!define\s)(\b[a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
 				</keywords>
 
