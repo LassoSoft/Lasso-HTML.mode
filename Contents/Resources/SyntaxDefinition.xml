@@ -229,14 +229,14 @@
 			<!-- Lasso delimiters container -->
 			<state id="Lasso Delimiters" containerState="yes" scope="meta.default">
 				<keywords id="Delimiters" casesensitive="no" useforautocomplete="no" scope="markup.comment">
-					<regex>(\[|\])</regex>
 					<string>[no_square_brackets]</string>
 					<string>[noprocess]</string>
 					<string>[/noprocess]</string>
+					<string>[</string>
 					<string>&lt;?LassoScript</string>
 					<string>&lt;?lasso</string>
 					<string>&lt;?=</string>
-					<string>?&gt;</string>
+					<regex>(\]|\?&gt;)</regex>
 					<regex>\A(#![ \S]+lasso9)\b</regex>
 				</keywords>
 			</state>
