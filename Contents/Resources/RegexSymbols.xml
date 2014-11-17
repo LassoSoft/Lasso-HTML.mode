@@ -56,7 +56,7 @@
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|[\s'"();]</find>
 			<replace></replace>
 			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=((?:.|[\n\r])+)</find>
-			<replace>(\1)</replace>
+			<replace>($1)</replace>
 			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=</find>
 			<replace>, </replace>
 			<find>,-[^)]+</find>
@@ -83,7 +83,7 @@
 			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
 			<replace></replace>
 			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)*([,)])</find>
-			<replace>\1</replace>
+			<replace>$1</replace>
 			<find>,</find>
 			<replace>, </replace>
 		</postprocess>
@@ -98,15 +98,15 @@
 			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
 			<replace></replace>
 			<find>(?i)(-&gt;[a-z_][\w.]*)=</find>
-			<replace>\1@</replace>
+			<replace>$1@</replace>
 			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)?([,)])</find>
-			<replace>\1</replace>
+			<replace>$1</replace>
 			<find>@</find>
 			<replace>=</replace>
 			<find>,</find>
 			<replace>, </replace>
 			<find>-&gt;([-+*/%])</find>
-			<replace>-&gt; \1 </replace>
+			<replace>-&gt; $1 </replace>
 		</postprocess>
 	</symbol>
 
@@ -119,13 +119,13 @@
 			<find>(?i)\(\)|::[a-z_][\w.]*|=&gt;</find>
 			<replace></replace>
 			<find>(?i)(\A[a-z_][\w.]*)=</find>
-			<replace>\1@</replace>
+			<replace>$1@</replace>
 			<find>=(?:.|[\n\r])*?(?:\([^()]*\)(?:.|[\n\r])*?)*([,)])</find>
-			<replace>\1</replace>
+			<replace>$1</replace>
 			<find>@</find>
 			<replace>=</replace>
 			<find>(\A[-+*/%]|,)</find>
-			<replace>\1 </replace>
+			<replace>$1 </replace>
 		</postprocess>
 	</symbol>
 
