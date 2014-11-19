@@ -26,7 +26,7 @@ Features
 
 - Full support for Lasso 9 syntax, including all delimiter styles (`[ ... ]`,
 `<?LassoScript` / `<?lasso` / `<?=` ... `?>`), tag literals, backticked strings,
-doc comments, and define statements.
+doc comments, and `define` statements.
 
 - Folding works on both 9-style braces blocks and 8-style container blocks, for
 all container tags that Lasso 8 ships with. Will still fold if the block is
@@ -59,7 +59,7 @@ supported:
 
 - `C`: `define_type` and Lasso 9 type definitions
 - `T`: Lasso 9 trait definitions
-- `F()`: `define_tag` and Lasso 9 unbound method definitions
+- `()`: `define_tag` and Lasso 9 unbound method definitions
 - `M`: Lasso 9 member methods
 - `E`: Lasso 9 externally-defined member methods
 - `#`: `include` and `library` statements
@@ -71,8 +71,8 @@ supported:
 
 ### Autocomplete
 
-- Includes all built-in tags, types, traits, unbound methods, and keywords in
-the autocomplete dictionary.
+- Includes all built-in types, traits, unbound methods, and keywords in the
+autocomplete dictionary.
 
 - Any type/trait/method definitions, imported trait references, or variable
 definitions or references in the current file are added to the autocomplete
@@ -80,17 +80,21 @@ dictionary.
 
 ### Other
 
-- Associated with the filename extensions ".lasso", ".las", & ".incl", plus
-files starting with a Lasso delimiter or hashbang.
+- Associated with the filename extensions ".lasso", ".lasso8", ".lasso9",
+".las", & ".incl", plus files starting with a Lasso delimiter or hashbang.
 
-- Block comments can be added/removed with the `⌘ command` + `/ slash` shortcut.
+- Line or block comments can be added/removed with the `⌘ command` + `/ slash`
+shortcut, depending on the current selection.
 
 
 Notes
 -----
 
-- Only boolean operators are highlighted, but I've left a commented-out regex in
+- Only boolean operators are highlighted, but there's a commented-out regex in
 SyntaxDefinition.xml that covers all operators.
+
+- Lasso 8-only tags were left out of the autocomplete dictionary, but will still
+highlight.
 
 - Coda's PHP mode already claims ".inc" files, so you'll want to change that in
 the Preferences if you use that extension. (It also currently claims any files
@@ -108,19 +112,19 @@ by HTML, the closing tag needs to be enclosed with the same style of delimiters
 (square vs. angle brackets) as the opening tag.
 
 - When member method definitions are separated by commas rather than keywords, a
-method definition not surrounded by braces will cause the next method to not
+method definition not surrounded by braces will cause the next method not to
 appear in the navigator sidebar.
 
 - `[no_square_brackets]` will cause the highlighter to ignore square brackets in
 plain HTML as well as inside `<script>` and `<style>` blocks, but not inside
-HTML tags or tag attributes. (This is technically fixable, but would make the
-highlighter far more complex.)
+HTML tags or tag attributes. (This is technically fixable, but would increase
+the highlighter's complexity considerably.)
 
   - `[no_square_brackets]` appearing inside a `<script>` or `<style>`
   block will disable the block's JavaScript or CSS highlighting.
   
-  - `[no_square_brackets]` isn't recognized when it appears inside a container
-  block or braces block.
+  - `[no_square_brackets]` isn't recognized when it appears among markup that's
+  inside a container block or braces block.
 
 - A JavaScript action attribute (e.g. `onClick`) or `href` or `src` inside an
 HTML tag will be highlighted incorrectly if its value contains a Lasso delimiter
