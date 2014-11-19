@@ -3,6 +3,8 @@
 <settings>
 	<recognition>
 		<extension>lasso</extension>
+		<extension>lasso8</extension>
+		<extension>lasso9</extension>
 		<extension>las</extension>
 		<extension>incl</extension>
 		<regex>\A#![ \S]+lasso9\b</regex>
