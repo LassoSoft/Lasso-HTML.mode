@@ -72,11 +72,11 @@ supported:
 ### Autocomplete
 
 - Includes all built-in types, traits, unbound methods, and keywords in the
-autocomplete dictionary.
+autocomplete dictionary. (Generated using [this script][1].)
 
 - Any type/trait/method definitions, imported trait references, or variable
-definitions or references in the current file are added to the autocomplete
-dictionary.
+definitions or references in the current file are also added to the autocomplete
+dictionary on-the-fly.
 
 ### Other
 
@@ -136,3 +136,5 @@ blocks.
 - For comma-separated variable definitions (e.g. `local(a = 1, b = 2)`) or trait
 imports (e.g. `import trait_custom1, trait_custom2`), the parser currently adds
 only the first in the list to the autocomplete dictionary.
+
+[1]: https://bitbucket.org/EricFromCanada/ericfromcanada.bitbucket.org/src/default/lasso/completions-generator.lasso
