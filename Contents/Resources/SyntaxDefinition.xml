@@ -307,297 +307,341 @@
 					<string>tag</string>
 					<string>xml</string>
 					<string>null</string>
-					<string>capture</string>
+					<string>boolean</string>
+					<string>bytes</string>
 					<string>keyword</string>
-					<string>custom</string>
-					<string>staticarray</string>
-					<string>signature</string>
-					<string>memberstream</string>
-					<string>dsinfo</string>
-					<string>sourcefile</string>
-					<string>opaque</string>
-					<string>filedesc</string>
-					<string>dirdesc</string>
+					<string>list</string>
 					<string>locale</string>
-					<string>ucal</string>
-					<string>xml_domimplementation</string>
-					<string>xml_node</string>
-					<string>xml_characterdata</string>
-					<string>xml_document</string>
-					<string>xml_element</string>
-					<string>xml_attr</string>
-					<string>xml_text</string>
-					<string>xml_cdatasection</string>
-					<string>xml_entityreference</string>
-					<string>xml_entity</string>
-					<string>xml_processinginstruction</string>
-					<string>xml_comment</string>
-					<string>xml_documenttype</string>
-					<string>xml_documentfragment</string>
-					<string>xml_notation</string>
-					<string>xml_nodelist</string>
-					<string>xml_namednodemap</string>
-					<string>xml_namednodemap_ht</string>
-					<string>xml_namednodemap_attr</string>
-					<string>sqlite3</string>
-					<string>sqlite3_stmt</string>
-					<string>mime_reader</string>
-					<string>curltoken</string>
-					<string>zip_impl</string>
-					<string>zip_file_impl</string>
-					<string>library_thread_loader</string>
-					<string>generateforeachunkeyed</string>
-					<string>generateforeachkeyed</string>
-					<string>eacher</string>
-					<string>queriable_where</string>
-					<string>queriable_select</string>
-					<string>queriable_selectmany</string>
-					<string>queriable_groupby</string>
-					<string>queriable_join</string>
-					<string>queriable_groupjoin</string>
-					<string>queriable_orderby</string>
-					<string>queriable_orderbydescending</string>
-					<string>queriable_thenby</string>
-					<string>queriable_thenbydescending</string>
-					<string>queriable_skip</string>
-					<string>queriable_take</string>
-					<string>queriable_grouping</string>
-					<string>generateseries</string>
-					<string>tie</string>
-					<string>pairup</string>
-					<string>delve</string>
-					<string>repeat</string>
-					<string>pair_compare</string>
-					<string>serialization_object_identity_compare</string>
-					<string>serialization_element</string>
-					<string>serialization_writer_standin</string>
-					<string>serialization_writer_ref</string>
-					<string>serialization_writer</string>
-					<string>serialization_reader</string>
-					<string>tree_nullnode</string>
-					<string>tree_node</string>
-					<string>tree_base</string>
-					<string>map_node</string>
-					<string>dir</string>
-					<string>java_jnienv</string>
-					<string>jobject</string>
-					<string>jmethodid</string>
-					<string>jfieldid</string>
-					<string>database_registry</string>
-					<string>sqlite_db</string>
-					<string>sqlite_results</string>
-					<string>sqlite_currentrow</string>
-					<string>sqlite_table</string>
-					<string>sqlite_column</string>
-					<string>curl</string>
-					<string>debugging_stack</string>
-					<string>dbgp_server</string>
-					<string>dbgp_packet</string>
-					<string>inline_type</string>
-					<string>json_literal</string>
-					<string>json_object</string>
-					<string>list_node</string>
-					<string>jchar</string>
-					<string>jchararray</string>
-					<string>jbyte</string>
-					<string>jbytearray</string>
-					<string>jfloat</string>
-					<string>jint</string>
-					<string>jshort</string>
-					<string>dateandtime</string>
-					<string>timeonly</string>
-					<string>net_tcp</string>
-					<string>net_tcpssl</string>
-					<string>net_tcp_ssl</string>
-					<string>net_named_pipe</string>
-					<string>net_udppacket</string>
-					<string>net_udp_packet</string>
-					<string>net_udp</string>
-					<string>pdf_typebase</string>
-					<string>pdf_hyphenator</string>
-					<string>pdf_chunk</string>
-					<string>pdf_phrase</string>
-					<string>pdf_paragraph</string>
-					<string>sys_process</string>
-					<string>worker_pool</string>
-					<string>zip_file</string>
-					<string>zip</string>
+					<string>queue</string>
+					<string>set</string>
+					<string>stack</string>
+					<string>staticarray</string>
+					<string>atbegin</string>
+					<string>bytes_document_body</string>
 					<string>cache_server_element</string>
 					<string>cache_server</string>
+					<string>capture</string>
+					<string>client_address</string>
+					<string>client_ip</string>
+					<string>component_container</string>
 					<string>component_render_state</string>
 					<string>component</string>
-					<string>component_container</string>
+					<string>curl</string>
+					<string>curltoken</string>
+					<string>currency</string>
+					<string>custom</string>
+					<string>data_document</string>
+					<string>database_registry</string>
+					<string>dateandtime</string>
+					<string>dbgp_packet</string>
+					<string>dbgp_server</string>
+					<string>debugging_stack</string>
+					<string>delve</string>
+					<string>dir</string>
+					<string>dirdesc</string>
+					<string>dns_response</string>
 					<string>document_base</string>
 					<string>document_body</string>
 					<string>document_header</string>
-					<string>text_document</string>
-					<string>data_document</string>
+					<string>dsinfo</string>
+					<string>eacher</string>
+					<string>email_compose</string>
+					<string>email_parse</string>
+					<string>email_pop</string>
 					<string>email_queue_impl_base</string>
+					<string>email_queue_impl</string>
+					<string>email_smtp</string>
 					<string>email_stage_impl_base</string>
-					<string>fcgi_record</string>
-					<string>web_request_impl</string>
-					<string>fcgi_request</string>
-					<string>include_cache</string>
-					<string>atbegin</string>
+					<string>email_stage_impl</string>
 					<string>fastcgi_each_fcgi_param</string>
 					<string>fastcgi_server</string>
+					<string>fcgi_record</string>
+					<string>fcgi_request</string>
+					<string>file</string>
+					<string>filedesc</string>
 					<string>filemaker_datasource</string>
-					<string>http_document</string>
-					<string>http_document_header</string>
-					<string>http_header_field</string>
-					<string>html_document_head</string>
-					<string>html_document_body</string>
-					<string>raw_document_body</string>
-					<string>bytes_document_body</string>
-					<string>html_attr</string>
+					<string>generateforeachkeyed</string>
+					<string>generateforeachunkeyed</string>
+					<string>generateseries</string>
 					<string>html_atomic_element</string>
-					<string>html_container_element</string>
-					<string>http_error</string>
-					<string>html_script</string>
-					<string>html_text</string>
-					<string>html_raw</string>
+					<string>html_attr</string>
+					<string>html_base</string>
 					<string>html_binary</string>
-					<string>html_json</string>
-					<string>html_cdata</string>
-					<string>html_eol</string>
-					<string>html_div</string>
-					<string>html_span</string>
 					<string>html_br</string>
-					<string>html_hr</string>
+					<string>html_cdata</string>
+					<string>html_container_element</string>
+					<string>html_div</string>
+					<string>html_document_body</string>
+					<string>html_document_head</string>
+					<string>html_eol</string>
+					<string>html_fieldset</string>
+					<string>html_form</string>
 					<string>html_h1</string>
 					<string>html_h2</string>
 					<string>html_h3</string>
 					<string>html_h4</string>
 					<string>html_h5</string>
 					<string>html_h6</string>
-					<string>html_meta</string>
-					<string>html_link</string>
-					<string>html_object</string>
-					<string>html_style</string>
-					<string>html_base</string>
-					<string>html_table</string>
-					<string>html_tr</string>
-					<string>html_td</string>
-					<string>html_th</string>
+					<string>html_hr</string>
 					<string>html_img</string>
-					<string>html_form</string>
-					<string>html_fieldset</string>
-					<string>html_legend</string>
 					<string>html_input</string>
+					<string>html_json</string>
 					<string>html_label</string>
+					<string>html_legend</string>
+					<string>html_link</string>
+					<string>html_meta</string>
+					<string>html_object</string>
 					<string>html_option</string>
+					<string>html_raw</string>
+					<string>html_script</string>
 					<string>html_select</string>
+					<string>html_span</string>
+					<string>html_style</string>
+					<string>html_table</string>
+					<string>html_td</string>
+					<string>html_text</string>
+					<string>html_th</string>
+					<string>html_tr</string>
+					<string>http_document_header</string>
+					<string>http_document</string>
+					<string>http_error</string>
+					<string>http_header_field</string>
+					<string>http_server_connection_handler_globals</string>
+					<string>http_server_connection_handler</string>
+					<string>http_server_request_logger_thread</string>
 					<string>http_server_web_connection</string>
 					<string>http_server</string>
-					<string>http_server_connection_handler</string>
-					<string>lassoapp_installer</string>
-					<string>lassoapp_content_rep_halt</string>
-					<string>lassoapp_dirsrc_fileresource</string>
-					<string>lassoapp_dirsrc_appsource</string>
-					<string>lassoapp_livesrc_fileresource</string>
-					<string>lassoapp_livesrc_appsource</string>
-					<string>lassoapp_long_expiring_bytes</string>
-					<string>lassoapp_zip_file_server</string>
-					<string>lassoapp_zipsrc_fileresource</string>
-					<string>lassoapp_zipsrc_appsource</string>
-					<string>lassoapp_compiledsrc_fileresource</string>
+					<string>image</string>
+					<string>include_cache</string>
+					<string>inline_type</string>
+					<string>java_jnienv</string>
+					<string>jbyte</string>
+					<string>jbytearray</string>
+					<string>jchar</string>
+					<string>jchararray</string>
+					<string>jfieldid</string>
+					<string>jfloat</string>
+					<string>jint</string>
+					<string>jmethodid</string>
+					<string>jobject</string>
+					<string>jshort</string>
+					<string>json_literal</string>
+					<string>json_object</string>
 					<string>lassoapp_compiledsrc_appsource</string>
+					<string>lassoapp_compiledsrc_fileresource</string>
+					<string>lassoapp_content_rep_halt</string>
+					<string>lassoapp_dirsrc_appsource</string>
+					<string>lassoapp_dirsrc_fileresource</string>
+					<string>lassoapp_installer</string>
+					<string>lassoapp_livesrc_appsource</string>
+					<string>lassoapp_livesrc_fileresource</string>
+					<string>lassoapp_long_expiring_bytes</string>
 					<string>lassoapp_manualsrc_appsource</string>
+					<string>lassoapp_zip_file_server</string>
+					<string>lassoapp_zipsrc_appsource</string>
+					<string>lassoapp_zipsrc_fileresource</string>
+					<string>ldap</string>
+					<string>library_thread_loader</string>
+					<string>list_node</string>
 					<string>log_impl_base</string>
-					<string>portal_impl</string>
-					<string>security_registry</string>
+					<string>log_impl</string>
+					<string>magick_image</string>
+					<string>map_node</string>
+					<string>memberstream</string>
 					<string>memory_session_driver_impl_entry</string>
 					<string>memory_session_driver_impl</string>
+					<string>memory_session_driver</string>
+					<string>mime_reader</string>
+					<string>mysql_session_driver_impl</string>
+					<string>mysql_session_driver</string>
+					<string>net_named_pipe</string>
+					<string>net_tcp_ssl</string>
+					<string>net_tcp</string>
+					<string>net_udp_packet</string>
+					<string>net_udp</string>
+					<string>odbc_session_driver_impl</string>
+					<string>odbc_session_driver</string>
+					<string>opaque</string>
+					<string>os_process</string>
+					<string>pair_compare</string>
+					<string>pairup</string>
+					<string>pdf_barcode</string>
+					<string>pdf_chunk</string>
+					<string>pdf_color</string>
+					<string>pdf_doc</string>
+					<string>pdf_font</string>
+					<string>pdf_hyphenator</string>
+					<string>pdf_image</string>
+					<string>pdf_list</string>
+					<string>pdf_paragraph</string>
+					<string>pdf_phrase</string>
+					<string>pdf_read</string>
+					<string>pdf_table</string>
+					<string>pdf_text</string>
+					<string>pdf_typebase</string>
+					<string>percent</string>
+					<string>portal_impl</string>
+					<string>queriable_groupby</string>
+					<string>queriable_grouping</string>
+					<string>queriable_groupjoin</string>
+					<string>queriable_join</string>
+					<string>queriable_orderby</string>
+					<string>queriable_orderbydescending</string>
+					<string>queriable_select</string>
+					<string>queriable_selectmany</string>
+					<string>queriable_skip</string>
+					<string>queriable_take</string>
+					<string>queriable_thenby</string>
+					<string>queriable_thenbydescending</string>
+					<string>queriable_where</string>
+					<string>raw_document_body</string>
+					<string>regexp</string>
+					<string>repeat</string>
+					<string>scientific</string>
+					<string>security_registry</string>
+					<string>serialization_element</string>
+					<string>serialization_object_identity_compare</string>
+					<string>serialization_reader</string>
+					<string>serialization_writer_ref</string>
+					<string>serialization_writer_standin</string>
+					<string>serialization_writer</string>
+					<string>session_delete_expired_thread</string>
+					<string>signature</string>
+					<string>sourcefile</string>
+					<string>sqlite_column</string>
+					<string>sqlite_currentrow</string>
+					<string>sqlite_db</string>
+					<string>sqlite_results</string>
 					<string>sqlite_session_driver_impl_entry</string>
 					<string>sqlite_session_driver_impl</string>
-					<string>mysql_session_driver_impl</string>
-					<string>odbc_session_driver_impl</string>
-					<string>session_delete_expired_thread</string>
-					<string>web_node_base</string>
-					<string>web_node_root</string>
-					<string>web_node_content_representation_xhr_container</string>
-					<string>web_node_content_representation_html_specialized</string>
-					<string>web_node_content_representation_css_specialized</string>
-					<string>web_node_content_representation_js_specialized</string>
-					<string>web_node_echo</string>
+					<string>sqlite_session_driver</string>
+					<string>sqlite_table</string>
+					<string>sqlite3_stmt</string>
+					<string>sqlite3</string>
+					<string>sys_process</string>
+					<string>text_document</string>
+					<string>tie</string>
+					<string>timeonly</string>
+					<string>trait</string>
+					<string>tree_base</string>
+					<string>tree_node</string>
+					<string>tree_nullnode</string>
+					<string>ucal</string>
+					<string>void</string>
 					<string>web_error_atend</string>
+					<string>web_node_base</string>
+					<string>web_node_content_representation_css_specialized</string>
+					<string>web_node_content_representation_html_specialized</string>
+					<string>web_node_content_representation_js_specialized</string>
+					<string>web_node_content_representation_xhr_container</string>
+					<string>web_node_echo</string>
+					<string>web_node_root</string>
+					<string>web_request_impl</string>
+					<string>web_request</string>
 					<string>web_response_impl</string>
+					<string>web_response</string>
 					<string>web_router</string>
+					<string>worker_pool</string>
+					<string>xml_attr</string>
+					<string>xml_cdatasection</string>
+					<string>xml_characterdata</string>
+					<string>xml_comment</string>
+					<string>xml_document</string>
+					<string>xml_documentfragment</string>
+					<string>xml_documenttype</string>
+					<string>xml_domimplementation</string>
+					<string>xml_element</string>
+					<string>xml_entity</string>
+					<string>xml_entityreference</string>
+					<string>xml_namednodemap_attr</string>
+					<string>xml_namednodemap_ht</string>
+					<string>xml_namednodemap</string>
+					<string>xml_node</string>
+					<string>xml_nodelist</string>
+					<string>xml_notation</string>
+					<string>xml_processinginstruction</string>
+					<string>xml_text</string>
+					<string>xmlstream</string>
+					<string>zip_file_impl</string>
+					<string>zip_file</string>
+					<string>zip_impl</string>
+					<string>zip</string>
 				</keywords>
 
 				<keywords id="Traits" casesensitive="no" useforautocomplete="yes" scope="support.type.trait">
-					<string>trait_asString</string>
 					<string>any</string>
-					<string>trait_generator</string>
+					<string>formattingbase</string>
+					<string>html_attributed</string>
+					<string>html_element_coreattrs</string>
+					<string>html_element_eventsattrs</string>
+					<string>html_element_i18nattrs</string>
+					<string>lassoapp_capabilities</string>
+					<string>lassoapp_resource</string>
+					<string>lassoapp_source</string>
+					<string>queriable_asString</string>
+					<string>session_driver</string>
+					<string>trait_array</string>
+					<string>trait_asString</string>
+					<string>trait_backcontractible</string>
+					<string>trait_backended</string>
+					<string>trait_backexpandable</string>
+					<string>trait_close</string>
+					<string>trait_contractible</string>
 					<string>trait_decompose_assignment</string>
-					<string>trait_foreach</string>
-					<string>trait_generatorcentric</string>
-					<string>trait_foreachtextelement</string>
+					<string>trait_doubleended</string>
+					<string>trait_each_sub</string>
+					<string>trait_encodeurl</string>
+					<string>trait_endedfullymutable</string>
+					<string>trait_expandable</string>
+					<string>trait_file</string>
 					<string>trait_finite</string>
 					<string>trait_finiteforeach</string>
+					<string>trait_foreach</string>
+					<string>trait_foreachtextelement</string>
+					<string>trait_frontcontractible</string>
+					<string>trait_frontended</string>
+					<string>trait_frontexpandable</string>
+					<string>trait_fullymutable</string>
+					<string>trait_generator</string>
+					<string>trait_generatorcentric</string>
+					<string>trait_hashable</string>
+					<string>trait_json_serialize</string>
 					<string>trait_keyed</string>
 					<string>trait_keyedfinite</string>
 					<string>trait_keyedforeach</string>
-					<string>trait_frontended</string>
-					<string>trait_backended</string>
-					<string>trait_doubleended</string>
-					<string>trait_positionallykeyed</string>
-					<string>trait_expandable</string>
-					<string>trait_frontexpandable</string>
-					<string>trait_backexpandable</string>
-					<string>trait_contractible</string>
-					<string>trait_frontcontractible</string>
-					<string>trait_backcontractible</string>
-					<string>trait_fullymutable</string>
 					<string>trait_keyedmutable</string>
-					<string>trait_endedfullymutable</string>
-					<string>trait_setoperations</string>
-					<string>trait_searchable</string>
-					<string>trait_positionallysearchable</string>
-					<string>trait_pathcomponents</string>
-					<string>trait_readbytes</string>
-					<string>trait_writebytes</string>
-					<string>trait_setencoding</string>
-					<string>trait_readstring</string>
-					<string>trait_writestring</string>
-					<string>trait_hashable</string>
-					<string>trait_each_sub</string>
-					<string>trait_stack</string>
 					<string>trait_list</string>
-					<string>trait_array</string>
 					<string>trait_map</string>
-					<string>trait_close</string>
-					<string>trait_file</string>
-					<string>trait_scalar</string>
-					<string>trait_queriablelambda</string>
-					<string>trait_queriable</string>
-					<string>queriable_asString</string>
-					<string>trait_serializable</string>
-					<string>trait_treenode</string>
-					<string>trait_json_serialize</string>
-					<string>formattingbase</string>
 					<string>trait_net</string>
+					<string>trait_pathcomponents</string>
+					<string>trait_positionallykeyed</string>
+					<string>trait_positionallysearchable</string>
+					<string>trait_queriable</string>
+					<string>trait_queriablelambda</string>
+					<string>trait_readbytes</string>
+					<string>trait_readstring</string>
+					<string>trait_scalar</string>
+					<string>trait_searchable</string>
+					<string>trait_serializable</string>
+					<string>trait_setencoding</string>
+					<string>trait_setoperations</string>
+					<string>trait_stack</string>
+					<string>trait_treenode</string>
+					<string>trait_writebytes</string>
+					<string>trait_writestring</string>
 					<string>trait_xml_elementcompat</string>
 					<string>trait_xml_nodecompat</string>
 					<string>web_connection</string>
-					<string>html_element_coreattrs</string>
-					<string>html_element_i18nattrs</string>
-					<string>html_element_eventsattrs</string>
-					<string>html_attributed</string>
-					<string>lassoapp_resource</string>
-					<string>lassoapp_source</string>
-					<string>lassoapp_capabilities</string>
-					<string>session_driver</string>
-					<string>web_node_content_json_specialized</string>
-					<string>web_node</string>
 					<string>web_node_container</string>
+					<string>web_node_content_css_specialized</string>
+					<string>web_node_content_document</string>
+					<string>web_node_content_html_specialized</string>
+					<string>web_node_content_js_specialized</string>
+					<string>web_node_content_json_specialized</string>
 					<string>web_node_content_representation</string>
 					<string>web_node_content</string>
-					<string>web_node_content_document</string>
 					<string>web_node_postable</string>
-					<string>web_node_content_html_specialized</string>
-					<string>web_node_content_css_specialized</string>
-					<string>web_node_content_js_specialized</string>
+					<string>web_node</string>
 				</keywords>
 
 				<!-- built-in unbound methods -->
