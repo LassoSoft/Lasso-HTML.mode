@@ -522,12 +522,10 @@
 					<string>text_document</string>
 					<string>tie</string>
 					<string>timeonly</string>
-					<string>trait</string>
 					<string>tree_base</string>
 					<string>tree_node</string>
 					<string>tree_nullnode</string>
 					<string>ucal</string>
-					<string>void</string>
 					<string>web_error_atend</string>
 					<string>web_node_base</string>
 					<string>web_node_content_representation_css_specialized</string>
@@ -644,8 +642,8 @@
 					<string>web_node</string>
 				</keywords>
 
-				<!-- built-in unbound methods -->
-				<keywords id="Unbound Methods" casesensitive="no" useforautocomplete="yes" scope="language.function.builtin">
+				<!-- built-in methods -->
+				<keywords id="Lasso 8 Tags" casesensitive="no" useforautocomplete="yes" scope="language.function.builtin">
 					<string>__char</string>
 					<string>__sync_timestamp__</string>
 					<string>_admin_addgroup</string>
@@ -1563,6 +1561,9 @@
 					<string>xsd_processsimpletype</string>
 					<string>xsd_ref</string>
 					<string>xsd_type</string>
+				</keywords>
+
+				<keywords id="Unbound Methods" casesensitive="no" useforautocomplete="yes" scope="language.function.builtin">
 					<string>fail_now</string>
 					<string>register</string>
 					<string>register_thread</string>
