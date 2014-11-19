@@ -750,13 +750,13 @@
 					<string>admin_userexists</string>
 					<string>admin_userlistgroups</string>
 					<string>array_iterator</string>
-					<string>auth</string>
 					<string>auth_admin</string>
 					<string>auth_auth</string>
 					<string>auth_custom</string>
 					<string>auth_group</string>
 					<string>auth_prompt</string>
 					<string>auth_user</string>
+					<string>auth</string>
 					<string>base64</string>
 					<string>bean</string>
 					<string>bigint</string>
@@ -765,8 +765,6 @@
 					<string>bom_utf32be</string>
 					<string>bom_utf32le</string>
 					<string>bom_utf8</string>
-					<string>boolean</string>
-					<string>bytes</string>
 					<string>cache_delete</string>
 					<string>cache_empty</string>
 					<string>cache_exists</string>
@@ -776,9 +774,9 @@
 					<string>cache_object</string>
 					<string>cache_preferences</string>
 					<string>cache_store</string>
-					<string>chartfx</string>
 					<string>chartfx_records</string>
 					<string>chartfx_serve</string>
+					<string>chartfx</string>
 					<string>checked</string>
 					<string>choice_list</string>
 					<string>choice_listitem</string>
@@ -791,7 +789,6 @@
 					<string>cipher_list</string>
 					<string>click_text</string>
 					<string>client_addr</string>
-					<string>client_address</string>
 					<string>client_authorization</string>
 					<string>client_browser</string>
 					<string>client_contentlength</string>
@@ -803,7 +800,6 @@
 					<string>client_getargs</string>
 					<string>client_getparams</string>
 					<string>client_headers</string>
-					<string>client_ip</string>
 					<string>client_ipfrominteger</string>
 					<string>client_iptointeger</string>
 					<string>client_password</string>
@@ -812,9 +808,9 @@
 					<string>client_type</string>
 					<string>client_url</string>
 					<string>client_username</string>
-					<string>column</string>
 					<string>column_name</string>
 					<string>column_names</string>
+					<string>column</string>
 					<string>compare_beginswith</string>
 					<string>compare_contains</string>
 					<string>compare_endswith</string>
@@ -839,13 +835,12 @@
 					<string>content_encoding</string>
 					<string>content_header</string>
 					<string>content_type</string>
-					<string>cookie</string>
 					<string>cookie_set</string>
+					<string>cookie</string>
 					<string>curl_ftp_getfile</string>
 					<string>curl_ftp_getlisting</string>
 					<string>curl_ftp_putfile</string>
 					<string>curl_include_url</string>
-					<string>currency</string>
 					<string>database_changecolumn</string>
 					<string>database_changefield</string>
 					<string>database_createcolumn</string>
@@ -860,8 +855,8 @@
 					<string>database_removecolumn</string>
 					<string>database_removefield</string>
 					<string>database_removetable</string>
-					<string>database_repeating</string>
 					<string>database_repeating_valueitem</string>
+					<string>database_repeating</string>
 					<string>database_repeatingvalueitem</string>
 					<string>database_schemanameitem</string>
 					<string>database_tablecolumn</string>
@@ -930,8 +925,6 @@
 					<string>directorynameitem</string>
 					<string>dns_default</string>
 					<string>dns_lookup</string>
-					<string>dns_response</string>
-					<string>email_compose</string>
 					<string>email_digestchallenge</string>
 					<string>email_digestresponse</string>
 					<string>email_extract</string>
@@ -940,13 +933,10 @@
 					<string>email_merge</string>
 					<string>email_mxerror</string>
 					<string>email_mxlookup</string>
-					<string>email_parse</string>
-					<string>email_pop</string>
 					<string>email_queue</string>
 					<string>email_result</string>
 					<string>email_safeemail</string>
 					<string>email_send</string>
-					<string>email_smtp</string>
 					<string>email_status</string>
 					<string>email_token</string>
 					<string>email_translatebreakstocrlf</string>
@@ -984,12 +974,11 @@
 					<string>error_seterrormessage</string>
 					<string>euro</string>
 					<string>event_schedule</string>
-					<string>fail</string>
 					<string>fail_if</string>
-					<string>field</string>
+					<string>fail</string>
 					<string>field_name</string>
 					<string>field_names</string>
-					<string>file</string>
+					<string>field</string>
 					<string>file_autoresolvefullpaths</string>
 					<string>file_chmod</string>
 					<string>file_control</string>
@@ -1049,18 +1038,17 @@
 					<string>ical_standard</string>
 					<string>ical_timezone</string>
 					<string>ical_todo</string>
-					<string>image</string>
 					<string>image_url</string>
 					<string>img</string>
-					<string>include</string>
 					<string>include_cgi</string>
 					<string>include_currentpath</string>
 					<string>include_once</string>
 					<string>include_raw</string>
 					<string>include_url</string>
+					<string>include</string>
 					<string>iterator</string>
-					<string>java</string>
 					<string>java_bean</string>
+					<string>java</string>
 					<string>json_records</string>
 					<string>json_rpccall</string>
 					<string>keycolumn_name</string>
@@ -1114,14 +1102,13 @@
 					<string>lassoapp_process</string>
 					<string>lassoapp_unitize</string>
 					<string>layout_name</string>
-					<string>ldap</string>
 					<string>ldap_scope_base</string>
 					<string>ldap_scope_onelevel</string>
 					<string>ldap_scope_subtree</string>
-					<string>ldml</string>
 					<string>ldml_ldml</string>
-					<string>library</string>
+					<string>ldml</string>
 					<string>library_once</string>
+					<string>library</string>
 					<string>link_currentactionparams</string>
 					<string>link_currentactionurl</string>
 					<string>link_currentgroupparams</string>
@@ -1152,7 +1139,6 @@
 					<string>link_prevrecordurl</string>
 					<string>link_setformat</string>
 					<string>link_url</string>
-					<string>list</string>
 					<string>list_additem</string>
 					<string>list_fromlist</string>
 					<string>list_fromstring</string>
@@ -1190,7 +1176,6 @@
 					<string>log_warning</string>
 					<string>logicalop_value</string>
 					<string>logicaloperator_value</string>
-					<string>magick_image</string>
 					<string>map_iterator</string>
 					<string>match_comparator</string>
 					<string>match_notrange</string>
@@ -1230,13 +1215,11 @@
 					<string>math_sub</string>
 					<string>math_tan</string>
 					<string>maxrecords_value</string>
-					<string>memory_session_driver</string>
 					<string>mime_type</string>
 					<string>misc__srand</string>
 					<string>misc_randomnumber</string>
 					<string>misc_roman</string>
 					<string>misc_valid_creditcard</string>
-					<string>mysql_session_driver</string>
 					<string>named_param</string>
 					<string>namespace_current</string>
 					<string>namespace_delimiter</string>
@@ -1247,7 +1230,6 @@
 					<string>namespace_load</string>
 					<string>namespace_page</string>
 					<string>namespace_unload</string>
-					<string>net</string>
 					<string>net_connectinprogress</string>
 					<string>net_connectok</string>
 					<string>net_typessl</string>
@@ -1258,6 +1240,7 @@
 					<string>net_waitread</string>
 					<string>net_waittimeout</string>
 					<string>net_waitwrite</string>
+					<string>net</string>
 					<string>no_default_output</string>
 					<string>nslookup</string>
 					<string>object</string>
@@ -1266,19 +1249,8 @@
 					<string>op_logicalvalue</string>
 					<string>operator_logicalvalue</string>
 					<string>option</string>
-					<string>os_process</string>
 					<string>output</string>
-					<string>pdf_barcode</string>
-					<string>pdf_color</string>
-					<string>pdf_doc</string>
-					<string>pdf_font</string>
-					<string>pdf_image</string>
-					<string>pdf_list</string>
-					<string>pdf_read</string>
 					<string>pdf_serve</string>
-					<string>pdf_table</string>
-					<string>pdf_text</string>
-					<string>percent</string>
 					<string>postcondition</string>
 					<string>precondition</string>
 					<string>prettyprintingnsmap</string>
@@ -1302,7 +1274,6 @@
 					<string>proc_xml</string>
 					<string>proc_xslt</string>
 					<string>process</string>
-					<string>queue</string>
 					<string>rand</string>
 					<string>randomnumber</string>
 					<string>raw</string>
@@ -1316,7 +1287,6 @@
 					<string>reference</string>
 					<string>referer_url</string>
 					<string>referrer_url</string>
-					<string>regexp</string>
 					<string>repeating_valueitem</string>
 					<string>repeatingvalueitem</string>
 					<string>repetition</string>
@@ -1335,7 +1305,6 @@
 					<string>row_count</string>
 					<string>rows_array</string>
 					<string>schema_name</string>
-					<string>scientific</string>
 					<string>search_columnitem</string>
 					<string>search_fielditem</string>
 					<string>search_operatoritem</string>
@@ -1370,7 +1339,6 @@
 					<string>session_result</string>
 					<string>session_setdriver</string>
 					<string>session_start</string>
-					<string>set</string>
 					<string>set_iterator</string>
 					<string>set_reverseiterator</string>
 					<string>shown_count</string>
@@ -1392,11 +1360,9 @@
 					<string>sortfielditem</string>
 					<string>sortorderitem</string>
 					<string>sqlite_createdb</string>
-					<string>sqlite_session_driver</string>
 					<string>sqlite_setsleepmillis</string>
 					<string>sqlite_setsleeptries</string>
 					<string>srand</string>
-					<string>stack</string>
 					<string>stock_quote</string>
 					<string>string_charfromname</string>
 					<string>string_concatenate</string>
@@ -1431,9 +1397,9 @@
 					<string>string_validcharset</string>
 					<string>table_name</string>
 					<string>table_realname</string>
-					<string>tags</string>
 					<string>tags_find</string>
 					<string>tags_list</string>
+					<string>tags</string>
 					<string>tcp_close</string>
 					<string>tcp_open</string>
 					<string>tcp_send</string>
@@ -1457,8 +1423,8 @@
 					<string>thread_setpriority</string>
 					<string>token_value</string>
 					<string>total_records</string>
-					<string>treemap</string>
 					<string>treemap_iterator</string>
+					<string>treemap</string>
 					<string>url_rewrite</string>
 					<string>valid_creditcard</string>
 					<string>valid_date</string>
@@ -1512,7 +1478,6 @@
 					<string>xml_transform</string>
 					<string>xml_xml</string>
 					<string>xml_xmlstream</string>
-					<string>xmlstream</string>
 					<string>xsd_attribute</string>
 					<string>xsd_blankarraybase</string>
 					<string>xsd_blankbase</string>
