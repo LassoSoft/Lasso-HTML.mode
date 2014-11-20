@@ -133,8 +133,8 @@ block.
 - HTML tag blocks aren't foldable, since they frequently overlap Lasso delimiter
 blocks.
 
-- For comma-separated variable definitions (e.g. `local(a = 1, b = 2)`) or trait
-imports (e.g. `import trait_custom1, trait_custom2`), the parser currently adds
-only the first in the list to the autocomplete dictionary.
+- For comma-separated variable definitions (e.g. `local(a = 1, b = 2)` or
+`var(x, y) = (:3, 4)`), the parser adds only the first in the list to the
+autocomplete dictionary.
 
 [1]: https://bitbucket.org/EricFromCanada/ericfromcanada.bitbucket.org/src/default/lasso/completions-generator.lasso

@@ -145,7 +145,9 @@
 
 	<!-- trait autocompletion -->
 	<symbol id="language.trait.import.lasso" hidden="yes" useforautocomplete="yes">
-		<regex>(?i)import\s+([a-z_][\w.]*)</regex>
+		<regex>(?i)import\s+([a-z_][\w.]*\s*(?:,(?:\s*//.*?[\n\r])?\s*[a-z_][\w.]*\s*)*)</regex>
+		<variables>(?:^|,)(?:\s*//.*?[\n\r])?\s*([\w.]+)</variables>
+		<captures>{ "variables" : "1" }</captures>
 	</symbol>
 
 </symbols>
