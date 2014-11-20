@@ -51,7 +51,7 @@
 
 	<!-- Define_Tag('tagname', ...) -->
 	<symbol id="language.function.lassoscript" image="SymbolF()" useforautocomplete="yes">
-		<regex>(?i)define_tag\s*[:(]\s*((?:.|[\n\r])+?;)\s*(?:/|[\n\r])</regex>
+		<regex>(?i)define_tag\s*[:(]\s*((?:.|[\n\r])+?;)\s*(?:\w+[:(]|/|[\n\r])</regex>
 		<postprocess>
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|[\s'"();]</find>
 			<replace></replace>
