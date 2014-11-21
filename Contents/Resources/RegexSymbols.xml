@@ -132,7 +132,7 @@
 	<!-- variable autocompletion -->
 	<symbol id="language.variable.lasso" hidden="yes" useforautocomplete="yes">
 		<regex>(?i)([#$][a-z_][\w.]*)</regex>
-		<regex>(?i)(\b(?:local|var(?:iable)?)\s*[:(]\s*['"`]?+[a-z_][\w.]*)(?![\w\s]*\()</regex>
+		<regex>(?i)(\b(?:local|var(?:iable)?)\s*[:(]\s*['"`]?[a-z_][\w.]*)(?![\w\s]*\()</regex>
 		<postprocess>
 			<find>[\s:('"`]+</find>
 			<replace> </replace>

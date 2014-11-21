@@ -1,8 +1,8 @@
 Lasso-HTML.mode
 ===============
 
-A Lasso syntax mode for [Coda](http://panic.com/coda). This is a replacement for
-the original LassoScript-HTML mode included in Coda 2.0, and comes with improved
+A Lasso syntax mode for [Coda 2.5](http://panic.com/coda). This is a replacement
+for the original LassoScript-HTML mode included in Coda, and comes with improved
 file recognition, syntax highlighting, code folding, autocompletion, support for
 the navigator sidebar, and full support for Lasso 9 syntax.
 
@@ -115,14 +115,14 @@ by HTML, the closing tag needs to be enclosed with the same style of delimiters
 method definition not surrounded by braces will cause the next method not to
 appear in the navigator sidebar.
 
-- `[no_square_brackets]` will cause the highlighter to ignore square brackets in
-plain HTML as well as inside `<script>` and `<style>` blocks, but not inside
+- `[no_square_brackets]` will cause the highlighter to ignore square brackets
+among plain HTML and within `<script>` and `<style>` blocks, but not inside
 HTML tags or tag attributes. (This is technically fixable, but would increase
 the highlighter's complexity considerably.)
 
   - `[no_square_brackets]` appearing inside a `<script>` or `<style>`
   block will disable the block's JavaScript or CSS highlighting.
-  
+
   - `[no_square_brackets]` isn't recognized when it appears among markup that's
   inside a container block or braces block.
 

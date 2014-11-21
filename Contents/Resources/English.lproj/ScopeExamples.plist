@@ -21,8 +21,8 @@
 		<key>language.function</key>
 		<string>my_function_call() ..parent_method</string>
 		<key>language.function.builtin</key>
-		<string>datasource_register encode_xml client_postparam</string>
-		<key>language.operator.keyword</key>
+		<string>database_initialize encode_qheader client_postparam</string>
+		<key>language.operator.logical</key>
 		<string>and or not</string>
 		<key>language.property</key>
 		<string>-caseSensitive</string>
@@ -48,15 +48,15 @@
 		<string>http://apple.com www.panic.com</string>
 		<key>meta.link.email</key>
 		<string>steve@apple.com</string>
-		<key>string.single.backtick</key>
-		<string>`lorem ipsum`</string>
 		<key>string.double</key>
 		<string>"lorem ipsum"</string>
 		<key>string.single</key>
 		<string>'lorem ipsum'</string>
+		<key>string.single.backtick</key>
+		<string>`lorem ipsum`</string>
 		<key>support.type</key>
 		<string>array date integer map string zip_file</string>
 		<key>support.type.trait</key>
-		<string>trait_asstring any queriable_asstring</string>
+		<string>trait_hashable any queriable_asString</string>
 	</dict>
 </plist>
