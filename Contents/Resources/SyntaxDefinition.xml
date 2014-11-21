@@ -123,12 +123,12 @@
 					<begin><regex>&lt;</regex></begin>
 					<end><regex>&gt;</regex></end>
 
-					<state id="Javascript Actions" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="markup.tag.attribute.name" >
-						<begin><regex>(?&lt;=[ \t])(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
+					<state id="JavaScript Actions" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.default" >
+						<begin><regex>\b(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
 						<end><regex>"</regex></end>
 
 						<keywords id="Action Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-							<regex>\A([\w-]+)[ \t]*=</regex>
+							<regex>\b((?i)on[\w-]+)[ \t]*=</regex>
 						</keywords>
 
 						<keywords id="Action Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
@@ -136,7 +136,7 @@
 						</keywords>
 
 						<keywords id="Action Equals" useforautocomplete="no" scope="markup.tag">
-							<regex>\A(?i)on[\w-]+([ \t]*=[ \t]*)</regex>
+							<regex>\b(?i)on[\w-]+([ \t]*=[ \t]*)</regex>
 						</keywords>
 
 						<state-link state="Disable Lasso Delimiters"/>
@@ -146,12 +146,12 @@
 						<import state="JavaScript Container"/>
 					</state>
 
-					<state id="Links" type="url" scope="markup.tag.attribute.name">
-						<begin><regex>(?&lt;=[ \t])(?i)(?:href|src)[ \t]*=[ \t]*"</regex></begin>
+					<state id="Links" type="url" useforautocomplete="no" scope="meta.link">
+						<begin><regex>\b(?i)(?:href|src|data-src)[ \t]*=[ \t]*"</regex></begin>
 						<end><regex>"</regex></end>
 
-						<state id="Javascript in Links" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
-							<begin><regex>\A[ \t]*(?i)javascript:</regex></begin>
+						<state id="JavaScript in Links" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
+							<begin><regex>\b[ \t]*(?i)javascript:</regex></begin>
 							<end><regex>(?'unwindend'")</regex></end>
 
 							<state-link state="Disable Lasso Delimiters"/>
@@ -162,7 +162,7 @@
 						</state>
 
 						<keywords id="Link Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-							<regex>\A(\w+)[ \t]*=</regex>
+							<regex>\b((?i)href|src|data-src)[ \t]*=</regex>
 						</keywords>
 
 						<keywords id="Link Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
@@ -170,7 +170,7 @@
 						</keywords>
 
 						<keywords id="Link Equals" useforautocomplete="no" scope="markup.tag">
-							<regex>\A(?i)\w+([ \t]*=[ \t]*)</regex>
+							<regex>\b(?i)(?:href|src|data-src)([ \t]*=[ \t]*)</regex>
 						</keywords>
 
 						<state-link state="Disable Lasso Delimiters"/>
@@ -178,7 +178,7 @@
 						<state-link state="Lasso Angle Delimiters"/>
 					</state>
 
-					<state id="Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
+					<state id="Strings in Tags" type="string" useforautocomplete="no" scope="markup.tag.attribute.value.string">
 						<begin><regex>"</regex></begin>
 						<end><regex>"</regex></end>
 
@@ -187,7 +187,7 @@
 						<state-link state="Lasso Angle Delimiters"/>
 					</state>
 
-					<state id="Single Strings in Tags" type="string" scope="markup.tag.attribute.value.string">
+					<state id="Single Strings in Tags" type="string" useforautocomplete="no" scope="markup.tag.attribute.value.string">
 						<begin><regex>'</regex></begin>
 						<end><regex>'</regex></end>
 
@@ -197,7 +197,7 @@
 					</state>
 
 					<keywords id="Attributes in Tags" useforautocomplete="no" scope="markup.tag.attribute.name">
-						<regex>([\w-]*)(?=[ \t]*=)</regex>
+						<regex>\b([\w-]*)(?=[ \t]*=)</regex>
 					</keywords>
 
 					<state-link state="Disable Lasso Delimiters"/>
