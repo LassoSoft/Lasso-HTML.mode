@@ -119,7 +119,7 @@
 					<import state="Tags"/>
 				</state>
 
-				<state id="Tags" usespellchecking="no" foldState="Foldable Tags" scope="markup.tag">
+				<state id="Tags" usespellchecking="no" scope="markup.tag">
 					<begin><regex>&lt;</regex></begin>
 					<end><regex>&gt;</regex></end>
 
@@ -205,8 +205,14 @@
 					<state-link state="Lasso Angle Delimiters"/>
 				</state>
 
-				<state-link mode="HTML" state="Foldable Tags"/>
-				<state-link mode="HTML" state="JavaScript Container"/>
+				<state id="JavaScript Container" containerState="yes" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
+					<import mode="JavaScript" keywords-only="yes"/>
+					<state-link state="AutodocComment" mode="JavaScript"/>
+					<state-link state="Comment" mode="JavaScript"/>
+					<state-link state="Regular Expressions" mode="JavaScript"/>
+					<state-link state="String" mode="JavaScript"/>
+					<state-link state="SingleString" mode="JavaScript"/>
+				</state>
 
 			</state>
 
