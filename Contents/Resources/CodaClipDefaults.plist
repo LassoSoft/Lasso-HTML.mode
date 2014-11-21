@@ -667,33 +667,27 @@
 					</array>
 				</dict>
 
-				<!-- Object definition -->
+				<!-- Type definition -->
 				<dict>
 					<key>Versions</key>
 					<array/>
 					<key>Title</key>
-					<string>Object definition</string>
+					<string>Type definition</string>
 					<key>Trigger</key>
 					<string>tdefine</string>
 					<key>Content</key>
-					<string>define object_name => type|trait|thread {&#xA;	Text Selection&#xA;}</string>
+					<string>define type_name => type {&#xA;	Text Selection&#xA;}</string>
 					<key>Placeholders</key>
 					<array>
 						<dict>
 							<key>Range</key>
-							<string>{7, 11}</string>
+							<string>{7, 9}</string>
 							<key>Type</key>
 							<integer>12</integer>
 						</dict>
 						<dict>
 							<key>Range</key>
-							<string>{22, 17}</string>
-							<key>Type</key>
-							<integer>12</integer>
-						</dict>
-						<dict>
-							<key>Range</key>
-							<string>{43, 14}</string>
+							<string>{28, 14}</string>
 							<key>Type</key>
 							<integer>10</integer>
 						</dict>
@@ -709,30 +703,30 @@
 					<key>Trigger</key>
 					<string>mmdefine</string>
 					<key>Content</key>
-					<string>member_name(parameters)::type => {&#xA;	Text Selection&#xA;}</string>
+					<string>public member_name(parameters)::type => {&#xA;	Text Selection&#xA;}</string>
 					<key>Placeholders</key>
 					<array>
 						<dict>
 							<key>Range</key>
-							<string>{0, 11}</string>
+							<string>{7, 11}</string>
 							<key>Type</key>
 							<integer>12</integer>
 						</dict>
 						<dict>
 							<key>Range</key>
-							<string>{12, 10}</string>
+							<string>{19, 10}</string>
 							<key>Type</key>
 							<integer>12</integer>
 						</dict>
 						<dict>
 							<key>Range</key>
-							<string>{25, 4}</string>
+							<string>{32, 4}</string>
 							<key>Type</key>
 							<integer>12</integer>
 						</dict>
 						<dict>
 							<key>Range</key>
-							<string>{36, 14}</string>
+							<string>{43, 14}</string>
 							<key>Type</key>
 							<integer>10</integer>
 						</dict>
