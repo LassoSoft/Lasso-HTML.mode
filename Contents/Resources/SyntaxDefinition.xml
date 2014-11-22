@@ -123,21 +123,9 @@
 					<begin><regex>&lt;</regex></begin>
 					<end><regex>&gt;</regex></end>
 
-					<state id="JavaScript Actions" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.default" >
+					<state id="JavaScript Actions" delimiterState="Tag Components" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.default" >
 						<begin><regex>\b(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
 						<end><regex>"</regex></end>
-
-						<keywords id="Action Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-							<regex>\b((?i)on[\w-]+)[ \t]*=</regex>
-						</keywords>
-
-						<keywords id="Action Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
-							<regex>(")</regex>
-						</keywords>
-
-						<keywords id="Action Equals" useforautocomplete="no" scope="markup.tag">
-							<regex>\b(?i)on[\w-]+([ \t]*=[ \t]*)</regex>
-						</keywords>
 
 						<state-link state="Disable Lasso Delimiters"/>
 						<state-link state="Lasso Square Delimiters"/>
@@ -146,7 +134,7 @@
 						<import state="JavaScript Container"/>
 					</state>
 
-					<state id="Links" type="url" useforautocomplete="no" scope="meta.link">
+					<state id="Links" type="url" delimiterState="Tag Components" useforautocomplete="no" scope="meta.link">
 						<begin><regex>\b(?i)(?:href|src|data-src)[ \t]*=[ \t]*"</regex></begin>
 						<end><regex>"</regex></end>
 
@@ -160,18 +148,6 @@
 							<import mode="JavaScript" keywords-only="yes"/>
 							<import state="JavaScript Container"/>
 						</state>
-
-						<keywords id="Link Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-							<regex>\b((?i)href|src|data-src)[ \t]*=</regex>
-						</keywords>
-
-						<keywords id="Link Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
-							<regex>(")</regex>
-						</keywords>
-
-						<keywords id="Link Equals" useforautocomplete="no" scope="markup.tag">
-							<regex>\b(?i)(?:href|src|data-src)([ \t]*=[ \t]*)</regex>
-						</keywords>
 
 						<state-link state="Disable Lasso Delimiters"/>
 						<state-link state="Lasso Square Delimiters"/>
@@ -205,6 +181,20 @@
 					<state-link state="Lasso Angle Delimiters"/>
 				</state>
 
+				<state id="Tag Components" containerState="yes" scope="meta.default">
+					<keywords id="Tag Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
+						<regex>\b([\w-]*)(?=[ \t]*=)</regex>
+					</keywords>
+
+					<keywords id="Tag Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
+						<regex>(")</regex>
+					</keywords>
+
+					<keywords id="Tag Equals" useforautocomplete="no" scope="markup.tag">
+						<regex>\b(?i)[\w-]+([ \t]*=[ \t]*)</regex>
+					</keywords>
+				</state>
+
 				<state id="JavaScript Container" containerState="yes" usesymbolsfrommode="JavaScript" useautocompletefrommode="JavaScript" scope="meta.block.js">
 					<import mode="JavaScript" keywords-only="yes"/>
 					<state-link state="AutodocComment" mode="JavaScript"/>
@@ -235,13 +225,8 @@
 			<!-- Lasso delimiters container -->
 			<state id="Lasso Delimiters" containerState="yes" scope="meta.default">
 				<keywords id="Delimiters" casesensitive="no" useforautocomplete="no" scope="markup.comment">
-					<string>[no_square_brackets]</string>
-					<string>[noprocess]</string>
-					<string>[/noprocess]</string>
-					<string>[</string>
-					<string>&lt;?LassoScript</string>
-					<string>&lt;?lasso</string>
-					<string>&lt;?=</string>
+					<regex>(\[(?:no_square_brackets\]|/?noprocess\])?)</regex>
+					<regex>(?i)(&lt;\?(?:Lasso(?:Script)?|=))</regex>
 					<regex>(\]|\?&gt;)</regex>
 					<regex>\A(#![ \S]+lasso9)\b</regex>
 				</keywords>

@@ -126,9 +126,8 @@ the highlighter's complexity considerably.)
   - `[no_square_brackets]` isn't recognized when it appears among markup that's
   inside a container block or braces block.
 
-- A JavaScript action attribute (e.g. `onClick`) or `href` or `src` inside an
-HTML tag will be highlighted incorrectly if its value contains a Lasso delimiter
-block.
+- A closing `[/noprocess]` among HTML/XML will work only if it's nested at the
+same level as its opening `[noprocess]`.
 
 - HTML tag blocks aren't foldable, since they frequently overlap Lasso delimiter
 blocks.
