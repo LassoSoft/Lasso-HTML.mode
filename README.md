@@ -76,8 +76,8 @@ supported:
 autocomplete dictionary. (Generated using [this script][1].)
 
 - Any type/trait/method definitions, imported trait references, or variable
-definitions or references in the current file are added to the autocomplete
-dictionary on-the-fly.
+definitions or references in the current file, or other open files referenced
+with `include` statements, are added to the autocomplete dictionary on-the-fly.
 
 ### Other
 
