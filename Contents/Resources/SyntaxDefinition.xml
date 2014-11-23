@@ -26,6 +26,7 @@
 
 					<import mode="XML" keywords-only="yes"/>
 					<state-link mode="XML" state="Comment"/>
+					<state-link state="Disable Lasso Delimiters"/>
 					<state-link state="Lasso Angle Delimiters"/>
 					<state-link mode="XML" state="CDATA"/>
 					<state-link mode="XML" state="Doctype"/>
