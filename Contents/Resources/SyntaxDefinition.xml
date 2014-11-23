@@ -2889,8 +2889,8 @@
 				</keywords>
 
 				<!-- method definitions and calls -->
-				<keywords id="Methods" useforautocomplete="no" scope="language.function">
-					<regex>(?i)define\s+([a-z_][\w.]*\b)(?!\s*=&gt;\s*(?:type|trait|thread)|\s*-&gt;)</regex>
+				<keywords id="Methods" casesensitive="no" useforautocomplete="no" scope="language.function">
+					<regex>(?i)define\s+([a-z_][\w.]*\b)(?!\s*=&gt;\s*(?:type|trait|thread)\b|\s*-&gt;)</regex>
 					<regex>(?i)(?:public|protected|private|provide)\s+([a-z_][\w.]*\b=?|[-+*/%])</regex>
 					<regex>(?i)(?:(?&lt;![\w.])\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
 					<regex>(?i)(?&lt;!define\s)(\b[a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
@@ -2926,11 +2926,11 @@
 				<!-- containers -->
 				<state id="Block Tags" delimiterState="Lasso Code" usesymbolsfrommode="Lasso-HTML" useautocompletefrommode="Lasso-HTML" type="block" foldable="yes" indent="yes" scope="meta.block.container">
 					<begin><regex>(?i)(?:\A|^)[ \t]*(?'lassoblockstart'cache|database_names|database_schemanames|database_tablenames|define_tag|define_type|email_batch|encode_set|records|html_comment|handle|handle_error|header|if|inline|iterate|ljax_target|link|link_currentaction|link_currentgroup|link_currentrecord|link_detail|link_firstgroup|link_firstrecord|link_lastgroup|link_lastrecord|link_nextgroup|link_nextrecord|link_prevgroup|link_prevrecord|log|loop|namespace_using|noprocess|output_none|portal|private|protect|referer|referrer|repeating|resultset|rows|search_args|search_arguments|select|sort_args|sort_arguments|thread_atomic|value_list|while)\b[ \t]*(?=;|:(?!:)|$\s*[^\s=]|\s*\((?&gt;[^()]*(?&gt;\([^()]*\)[^()]*)*)+\)\s*(?:;|:|$\s*[^\s=]|\?&gt;|\]))</regex><autoend>/\g&lt;lassoblockstart&gt;;</autoend></begin>
-					<end><regex>(?i)/(?#see-insert-start-group:lassoblockstart)</regex></end>
+					<end><regex>(?i)/(?#see-insert-start-group:lassoblockstart)\b</regex></end>
 
 					<state id="Block Tags Split" delimiterState="Lasso Delimiters" usesymbolsfrommode="HTML" useautocompletefrommode="HTML" scope="meta.default">
 						<begin><regex>\?&gt;|\]</regex></begin>
-						<end><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)|\[(?!noprocess)</regex></end>
+						<end><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)|\[(?!noprocess\])</regex></end>
 
 						<import mode="XML" keywords-only="yes"/>
 						<state-link mode="XML" state="Comment"/>
@@ -2952,7 +2952,7 @@
 
 					<state id="Capture Block Split" delimiterState="Lasso Delimiters" usesymbolsfrommode="HTML" useautocompletefrommode="HTML" scope="meta.default">
 						<begin><regex>\?&gt;|\]</regex></begin>
-						<end><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)|\[(?!noprocess)</regex></end>
+						<end><regex>(?i)&lt;\?(?:Lasso(?:Script)?|=)|\[(?!noprocess\])</regex></end>
 
 						<import mode="XML" keywords-only="yes"/>
 						<state-link mode="XML" state="Comment"/>
