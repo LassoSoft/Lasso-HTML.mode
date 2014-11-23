@@ -77,7 +77,11 @@
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
 
 					<state-link state="Disable Square Delimiters"/>
-					<state-link state="Disable Lasso Delimiters"/>
+					<state id="Disable Lasso Delimiters in CSS" delimiterState="Lasso Delimiters" scope="meta.default">
+						<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+						<end><regex>\[/noprocess\]</regex></end>
+						<import mode="CSS"/>
+					</state>
 					<state-link state="Lasso Square Delimiters"/>
 					<state-link state="Lasso Angle Delimiters"/>
 					<import mode="CSS"/>
@@ -87,7 +91,7 @@
 					<begin><regex>&lt;[ \t]*(?i)style[^>]*(?&lt;!\?)></regex><autoend>&lt;/style></autoend></begin>
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
 
-					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Disable Lasso Delimiters in CSS"/>
 					<state-link state="Lasso Angle Delimiters"/>
 					<import mode="CSS"/>
 				</state>
@@ -97,7 +101,12 @@
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
 
 					<state-link state="Disable Square Delimiters"/>
-					<state-link state="Disable Lasso Delimiters"/>
+					<state id="Disable Lasso Delimiters in JavaScript" delimiterState="Lasso Delimiters" scope="meta.default">
+						<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+						<end><regex>\[/noprocess\]</regex></end>
+						<import mode="JavaScript" keywords-only="yes"/>
+						<import state="JavaScript Container"/>
+					</state>
 					<state-link state="Lasso Square Delimiters"/>
 					<state-link state="Lasso Angle Delimiters"/>
 					<import mode="JavaScript"/>
@@ -107,7 +116,7 @@
 					<begin><regex>(?:&lt;[ \t]*(?i)script\s*?>)|(?:&lt;[ \t]*(?i)script.+?javascript.*?(?&lt;![-?])>)</regex><autoend>&lt;/script></autoend></begin>
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
 
-					<state-link state="Disable Lasso Delimiters"/>
+					<state-link state="Disable Lasso Delimiters in JavaScript"/>
 					<state-link state="Lasso Angle Delimiters"/>
 					<import mode="JavaScript"/>
 				</state>
@@ -127,7 +136,7 @@
 						<begin><regex>\b(?i)on[\w]+[ \t]*=[ \t]*"</regex></begin>
 						<end><regex>"</regex></end>
 
-						<state-link state="Disable Lasso Delimiters"/>
+						<state-link state="Disable Lasso Delimiters in JavaScript"/>
 						<state-link state="Lasso Square Delimiters"/>
 						<state-link state="Lasso Angle Delimiters"/>
 						<import mode="JavaScript" keywords-only="yes"/>
@@ -142,7 +151,7 @@
 							<begin><regex>\b[ \t]*(?i)javascript:</regex></begin>
 							<end><regex>(?'unwindend'")</regex></end>
 
-							<state-link state="Disable Lasso Delimiters"/>
+							<state-link state="Disable Lasso Delimiters in JavaScript"/>
 							<state-link state="Lasso Square Delimiters"/>
 							<state-link state="Lasso Angle Delimiters"/>
 							<import mode="JavaScript" keywords-only="yes"/>
@@ -183,7 +192,7 @@
 
 				<state id="Tag Components" containerState="yes" scope="meta.default">
 					<keywords id="Tag Attribute" useforautocomplete="no" scope="markup.tag.attribute.name">
-						<regex>\b([\w-]*)(?=[ \t]*=)</regex>
+						<regex>\b([\w-]+)(?=[ \t]*=)</regex>
 					</keywords>
 
 					<keywords id="Tag Quotes" useforautocomplete="no" scope="markup.tag.attribute.value.string">
@@ -191,7 +200,7 @@
 					</keywords>
 
 					<keywords id="Tag Equals" useforautocomplete="no" scope="markup.tag">
-						<regex>\b(?i)[\w-]+([ \t]*=[ \t]*)</regex>
+						<regex>\b[\w-]+([ \t]*=[ \t]*)</regex>
 					</keywords>
 				</state>
 
