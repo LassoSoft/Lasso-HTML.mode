@@ -19,6 +19,7 @@ Then, have Coda use the mode either by opening its Preferences and assigning the
 opening up the application package and removing the old LassoScript-HTML mode
 from `Contents/Resources/`.
 
+
 Features
 --------
 
@@ -75,7 +76,7 @@ supported:
 autocomplete dictionary. (Generated using [this script][1].)
 
 - Any type/trait/method definitions, imported trait references, or variable
-definitions or references in the current file are also added to the autocomplete
+definitions or references in the current file are added to the autocomplete
 dictionary on-the-fly.
 
 ### Other
@@ -120,11 +121,8 @@ among plain HTML and within `<script>` and `<style>` blocks, but not inside
 HTML tags or tag attributes. (This is technically fixable, but would increase
 the highlighter's complexity considerably.)
 
-  - `[no_square_brackets]` appearing inside a `<script>` or `<style>`
-  block will disable the block's JavaScript or CSS highlighting.
-
-  - `[no_square_brackets]` isn't recognized when it appears among markup that's
-  inside a container block or braces block.
+- `[no_square_brackets]` isn't recognized when it appears among markup that's
+inside a container block or braces block, nor in `<script>` or `<style>` blocks.
 
 - A closing `[/noprocess]` among HTML/XML will work only if it's nested at the
 same level as its opening `[noprocess]`.
