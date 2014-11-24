@@ -95,7 +95,7 @@
 		<postprocess>
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
 			<replace></replace>
-			<find>(?i)(-&gt;[a-z_][\w.]*)=</find>
+			<find>(?i)(-&gt;[a-z_][\w.]*)=(?!&gt;)</find>
 			<replace>$1@</replace>
 			<find>(?i)\w+-&gt;(?=\w)|\(\)|::[a-z_][\w.]*|=&gt;</find>
 			<replace></replace>
