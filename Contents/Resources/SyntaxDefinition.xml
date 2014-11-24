@@ -21,7 +21,7 @@
 
 				<!-- [no_square_brackets] -->
 				<state id="Disable Square Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
-					<begin><regex>\[no_square_brackets\]</regex></begin>
+					<begin><regex>(?i)\[no_square_brackets\]</regex></begin>
 					<end><regex>\Z</regex></end>
 
 					<import mode="XML" keywords-only="yes"/>
@@ -39,8 +39,8 @@
 
 				<!-- [noprocess] block -->
 				<state id="Disable Lasso Delimiters" delimiterState="Lasso Delimiters" scope="meta.default">
-					<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
-					<end><regex>\[/noprocess\]</regex></end>
+					<begin><regex>(?i)\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+					<end><regex>(?i)\[/noprocess\]</regex></end>
 
 					<import mode="XML" keywords-only="yes"/>
 					<state-link mode="XML" state="Comment"/>
@@ -78,8 +78,8 @@
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*style[ \t]*></regex></end>
 
 					<state id="Disable Lasso Delimiters in CSS" delimiterState="Lasso Delimiters" scope="meta.default">
-						<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
-						<end><regex>\[/noprocess\]</regex></end>
+						<begin><regex>(?i)\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+						<end><regex>(?i)\[/noprocess\]</regex></end>
 						<import mode="CSS"/>
 					</state>
 					<state-link state="Lasso Square Delimiters"/>
@@ -101,8 +101,8 @@
 					<end><regex>(?i)&lt;[ \t]*/[ \t]*script[ \t]*></regex></end>
 
 					<state id="Disable Lasso Delimiters in JavaScript" delimiterState="Lasso Delimiters" scope="meta.default">
-						<begin><regex>\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
-						<end><regex>\[/noprocess\]</regex></end>
+						<begin><regex>(?i)\[noprocess\]</regex><autoend>[/noprocess]</autoend></begin>
+						<end><regex>(?i)\[/noprocess\]</regex></end>
 						<import mode="JavaScript" keywords-only="yes"/>
 						<import state="JavaScript Container"/>
 					</state>
@@ -232,8 +232,8 @@
 
 			<!-- Lasso delimiters container -->
 			<state id="Lasso Delimiters" containerState="yes" scope="meta.default">
-				<keywords id="Delimiters" casesensitive="no" useforautocomplete="no" scope="markup.comment">
-					<regex>(\[(?:no_square_brackets\]|/?noprocess\])?)</regex>
+				<keywords id="Delimiters" useforautocomplete="no" scope="markup.comment">
+					<regex>(?i)(\[(?:no_square_brackets\]|/?noprocess\])?)</regex>
 					<regex>(?i)(&lt;\?(?:Lasso(?:Script)?|=))</regex>
 					<regex>(\]|\?&gt;)</regex>
 					<regex>\A(#![ \S]+lasso9)\b</regex>
@@ -2891,7 +2891,7 @@
 				</keywords>
 
 				<!-- method definitions and calls -->
-				<keywords id="Methods" casesensitive="no" useforautocomplete="no" scope="language.function">
+				<keywords id="Methods" useforautocomplete="no" scope="language.function">
 					<regex>(?i)define\s+([a-z_][\w.]*\b)(?!\s*=&gt;\s*(?:type|trait|thread)\b|\s*-&gt;)</regex>
 					<regex>(?i)(?:public|protected|private|provide)\s+([a-z_][\w.]*\b=?|[-+*/%])</regex>
 					<regex>(?i)(?:(?&lt;![\w.])\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
