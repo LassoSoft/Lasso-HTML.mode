@@ -2853,6 +2853,8 @@
 					<string>yieldhome</string>
 					<string>self</string>
 					<string>inherited</string>
+					<string>currentcapture</string>
+					<string>givenblock</string>
 					<regex>(?&lt;![\w.])(\.(?:\.\.?)?)(?!\d)</regex>
 				</keywords>
 
@@ -2894,7 +2896,6 @@
 					<regex>(?i)(?:public|protected|private|provide)\s+([a-z_][\w.]*\b=?|[-+*/%])</regex>
 					<regex>(?i)(?:(?&lt;![\w.])\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
 					<regex>(?i)(?&lt;!define\s)(\b[a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
-					<string>givenblock</string>
 				</keywords>
 
 				<!-- variables -->

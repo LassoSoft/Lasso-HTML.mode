@@ -16093,6 +16093,12 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>currentcapture</string>
+			<key>String</key>
+			<string>currentcapture</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>custom</string>
 			<key>String</key>
 			<string>custom</string>
