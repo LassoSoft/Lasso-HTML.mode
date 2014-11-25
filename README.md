@@ -43,9 +43,9 @@ delimiters in a `[noprocess] ... [/noprocess]` block.
 - Inherits from other modes to highlight HTML, CSS, and JavaScript where
 appropriate.
 
-- When a Lasso 9 hashbang, comment, tag literal, capture block, or define
-statement is encountered outside delimiters, the highlighter assumes the file is
-a library or shell script and doesn't require delimiters to highlight as Lasso.
+- A file starting with an open square or angle bracket is assumed to be HTML
+with Lasso between delimiters; otherwise, it's read as a Lasso library or shell
+script.
 
 - Highlights Lasso 8's built-in types and tags, and Lasso 9's built-in types,
 traits, and unbound methods; as well as language keywords, variables, strings,
