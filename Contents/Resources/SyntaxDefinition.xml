@@ -2892,10 +2892,10 @@
 
 				<!-- method definitions and calls -->
 				<keywords id="Methods" useforautocomplete="no" scope="language.function">
+					<regex>(?i)(?:(?&lt;!(?:\w|\.))\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*(?:\.|\b)(?:=(?!=))?|[-+*/%])</regex>
+					<regex>(?i)(?&lt;!define\s)\b([a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
 					<regex>\b(?i)define\s+([a-z_][\w.]*(?:\.|\b))(?!\s*=&gt;\s*t(?:ype|rait|hread)\b|\s*-&gt;)</regex>
 					<regex>\b(?i)p(?:r(?:o(?:tected|vide)|ivate)|ublic)\s+([a-z_][\w.]*=?|[-+*/%])</regex>
-					<regex>(?i)(?:(?&lt;!(?:\w|\.))\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*(?:=(?!=))?|[-+*/%])</regex>
-					<regex>(?i)(?&lt;!define\s)\b([a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
 				</keywords>
 
 				<!-- variables -->
