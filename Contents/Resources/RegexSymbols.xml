@@ -55,9 +55,9 @@
 		<postprocess>
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|[\s'"();]</find>
 			<replace></replace>
-			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=((?:.|[\n\r])+)</find>
+			<find>(?i),(?:.|[\n\r])*?-(?:req(?:uired)?|(?:opt(?:ional)?))=((?:.|[\n\r])+)</find>
 			<replace>($1)</replace>
-			<find>(?i),(?:.|[\n\r])*?-(?:required|req|optional|opt)=</find>
+			<find>(?i),(?:.|[\n\r])*?-(?:req(?:uired)?|(?:opt(?:ional)?))=</find>
 			<replace>, </replace>
 			<find>,-[^)]+</find>
 			<replace></replace>
@@ -66,17 +66,17 @@
 
 	<!-- define typename => type -->
 	<symbol id="language.class.lasso" image="SymbolC" useforautocomplete="yes">
-		<regex>\b(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*(?:type|thread)</regex>
+		<regex>\b(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*t(?:ype|hread)\b</regex>
 	</symbol>
 
 	<!-- define traitname => trait -->
 	<symbol id="language.trait.lasso" image="SymbolT" useforautocomplete="yes">
-		<regex>\b(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*trait</regex>
+		<regex>\b(?i)define\s+([a-z_][\w.]*)\s*=&gt;\s*trait\b</regex>
 	</symbol>
 
 	<!-- define method(...) => -->
 	<symbol id="language.function.lasso" image="SymbolF()" useforautocomplete="yes">
-		<regex>\b(?i)define\s+([a-z_][\w.]*\s*(?:\((?:.|[\n\r])*?=&gt;|=&gt;(?!\s*(?:type|trait|thread))))</regex>
+		<regex>\b(?i)define\s+([a-z_][\w.]*\s*(?:\((?:.|[\n\r])*?=&gt;|=&gt;(?!\s*t(?:ype|rait|hread)\b)))</regex>
 		<postprocess>
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
 			<replace></replace>
@@ -112,7 +112,7 @@
 
 	<!-- public method(...) => -->
 	<symbol id="language.method.lasso" image="SymbolM" indentation="1" useforautocomplete="yes">
-		<regex>(?i)(?:\bp(?:ublic|rotected|rivate|rovide)|\}\s*,)\s+((?:[a-z_][\w.]*=?|[-+*/%])\s*(?:\((?:.|[\n\r])*?)?=&gt;)</regex>
+		<regex>(?i)(?:\bp(?:r(?:o(?:tected|vide)|ivate)|ublic)|\}\s*,)\s+((?:[a-z_][\w.]*=?|[-+*/%])\s*(?:\((?:.|[\n\r])*?)?=&gt;)</regex>
 		<postprocess>
 			<find>//.*?[\n\r]|/\*(?:.|[\n\r])*?\*/|\s+</find>
 			<replace></replace>
@@ -132,7 +132,7 @@
 	<!-- variable autocompletion -->
 	<symbol id="language.variable.lasso" hidden="yes" useforautocomplete="yes">
 		<regex>(?i)([#$][a-z_][\w.]*)</regex>
-		<regex>(?i)(\b(?:local|var(?:iable)?)\s*[:(]\s*['"`]?[a-z_][\w.]*)(?![\w\s]*\()</regex>
+		<regex>\b(?i)((?:local|var(?:iable)?)\s*[:(]\s*['"`]?[a-z_][\w.]*(?:\.|\b))(?![\w\s]*\()</regex>
 		<postprocess>
 			<find>[\s:('"`]+</find>
 			<replace> </replace>

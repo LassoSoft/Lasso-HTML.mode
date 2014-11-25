@@ -277,7 +277,7 @@
 
 				<!-- numerals -->
 				<keywords id="Numerals" useforautocomplete="no" scope="constant.numeric">
-					<regex>(?i)((?&lt;![\w.])(?:\d*\.\d+(?:e[-+]?\d+)?|0x[\da-f]+|\d+))</regex>
+					<regex>(?i)((?&lt;!(?:\w|\.))(?:\d*\.\d+(?:e[-+]?\d+)?|0x[\da-f]+|\d+)\b)</regex>
 				</keywords>
 
 				<!-- logical/numeric constants -->
@@ -2855,7 +2855,7 @@
 					<string>inherited</string>
 					<string>currentcapture</string>
 					<string>givenblock</string>
-					<regex>(?&lt;![\w.])(\.(?:\.\.?)?)(?!\d)</regex>
+					<regex>(?&lt;!(?:\w|\.))(\.(?:\.\.?)?)(?!\d)</regex>
 				</keywords>
 
 				<keywords id="Error Keywords" casesensitive="no" useforautocomplete="yes" scope="keyword.error">
@@ -2878,7 +2878,7 @@
 					<string>Error_RequiredColumnMissing</string>
 					<string>Error_RequiredFieldMissing</string>
 					<string>Error_UpdateError</string>
-					<regex>(?i)(error_(?:code|msg)_\w+)</regex>
+					<regex>\b(?i)(error_(?:code|msg)_\w+)</regex>
 				</keywords>
 
 				<!-- variable keywords -->
@@ -2892,15 +2892,15 @@
 
 				<!-- method definitions and calls -->
 				<keywords id="Methods" useforautocomplete="no" scope="language.function">
-					<regex>(?i)define\s+([a-z_][\w.]*\b)(?!\s*=&gt;\s*(?:type|trait|thread)\b|\s*-&gt;)</regex>
-					<regex>(?i)(?:public|protected|private|provide)\s+([a-z_][\w.]*\b=?|[-+*/%])</regex>
-					<regex>(?i)(?:(?&lt;![\w.])\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*=?|[-+*/%])</regex>
-					<regex>(?i)(?&lt;!define\s)(\b[a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
+					<regex>\b(?i)define\s+([a-z_][\w.]*(?:\.|\b))(?!\s*=&gt;\s*t(?:ype|rait|hread)\b|\s*-&gt;)</regex>
+					<regex>\b(?i)p(?:r(?:o(?:tected|vide)|ivate)|ublic)\s+([a-z_][\w.]*=?|[-+*/%])</regex>
+					<regex>(?i)(?:(?&lt;!(?:\w|\.))\.\.?|/|-&gt;|\\|(?&lt;!&amp;)&amp;)\s*([a-z_][\w.]*(?:=(?!=))?|[-+*/%])</regex>
+					<regex>(?i)(?&lt;!define\s)\b([a-z_][\w.]*)\s*(?=(?:::\s*[a-z_][\w.]*\s*)?=&gt;|-&gt;|:(?!:)|\()</regex>
 				</keywords>
 
 				<!-- variables -->
 				<keywords id="Variables" useforautocomplete="no" scope="language.variable">
-					<regex>(?i)(#(?:[a-z_][\w.]*|\d+))</regex>
+					<regex>(?i)(#(?:[a-z_][\w.]*|\d+\b))</regex>
 					<regex>(?i)(\$[a-z_][\w.]*)</regex>
 				</keywords>
 
@@ -2919,7 +2919,7 @@
 					<string>and</string>
 					<string>or</string>
 					<string>not</string>
-					<regex>(?i)(?&lt;==)(n?bw|n?ew|n?cn|lte?|gte?|n?eq|n?rx|ft)\b</regex>
+					<regex>(?i)(?&lt;==)(n?(?:e[qw]|bw|cn|rx)|[gl]te?|ft)\b</regex>
 					<regex>(&amp;&amp;|\|\||!(?![=&gt;]))</regex>
 					<!-- <regex>(:=|[-+*/%=&lt;&gt;&amp;|!?\\]+)</regex> -->
 				</keywords>
