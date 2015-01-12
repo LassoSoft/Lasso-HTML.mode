@@ -2900,8 +2900,10 @@
 
 				<!-- variables -->
 				<keywords id="Variables" useforautocomplete="no" scope="language.variable">
-					<regex>(?i)(#(?:[a-z_][\w.]*|\d+\b))</regex>
 					<regex>(?i)(\$[a-z_][\w.]*)</regex>
+				</keywords>
+				<keywords id="Local Variables" useforautocomplete="no" scope="language.variable.local">
+					<regex>(?i)(#(?:[a-z_][\w.]*|\d+\b))</regex>
 				</keywords>
 
 				<!-- keyword parameters -->
