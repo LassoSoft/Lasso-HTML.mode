@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CodaAuthorString</key>
+	<string>LassoSoft Inc.</string>
+	<key>CodaDescriptionString</key>
+	<string>Coda Syntax Mode for Lasso</string>
+	<key>CodaIconMaskTintString</key>
+	<string>#4428ac</string>
 	<key>CFBundleIdentifier</key>
 	<string>SEEMode.Lasso-HTML</string>
 	<key>CFBundleName</key>

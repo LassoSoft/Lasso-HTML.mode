@@ -10,9 +10,10 @@ the navigator sidebar, and full support for Lasso 9 syntax.
 Installation
 ------------
 
-Download/extract the zip or clone this repo, rename to `Lasso-HTML.mode`, and
-drop into `~/Library/Application Support/Coda 2/Modes`. If that folder doesn't
-exist, create it.
+Download/extract the zip or clone this repo, rename the folder to
+`Lasso-HTML.mode`, and double-click the resulting package. Or, drop into
+`~/Library/Application Support/Coda 2/Modes`. If that folder doesn't exist,
+create it.
 
 Then, have Coda use the mode either by opening its Preferences and assigning the
 ".lasso" extension to Lasso-HTML under Editor > Custom Syntax Modes, or
