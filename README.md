@@ -15,10 +15,13 @@ Download/extract the zip or clone this repo, rename the folder to
 `~/Library/Application Support/Coda 2/Modes`. If that folder doesn't exist,
 create it.
 
-Then, have Coda use the mode either by opening its Preferences and assigning the
-".lasso" extension to Lasso-HTML under Editor > Custom Syntax Modes, or
-opening up the application package and removing the old LassoScript-HTML mode
-from `Contents/Resources/`.
+Then, to have Coda use the mode, either:
+
+- open Coda's Preferences and assign the ".lasso" and ".inc" extensions to
+Lasso-HTML under Editor > Custom Syntax Modes
+
+- inside the Coda application package, remove the old LassoScript-HTML mode from
+`Contents/Resources/`
 
 
 Features
@@ -76,9 +79,11 @@ supported:
 - Includes all built-in types, traits, unbound methods, and keywords in the
 autocomplete dictionary. (Generated using [this script][1].)
 
-- Any type/trait/method definitions, imported trait references, or variable
-definitions or references in the current file, or other open files referenced
-with `include` statements, are added to the autocomplete dictionary on-the-fly.
+  - Autocomplete for Lasso 8-only tags is provided by [this plugin][2].
+
+- Names from type/trait/method definitions, variable definitions or references,
+or imported trait references in the current file or other open files referenced
+with `include` statements are added to the autocomplete dictionary on-the-fly.
 
 ### Other
 
@@ -94,9 +99,6 @@ Notes
 
 - Only boolean operators are highlighted, but there's a commented-out regex in
 SyntaxDefinition.xml that covers all operators.
-
-- Lasso 8-only tags were left out of the autocomplete dictionary, but will still
-highlight.
 
 - Coda's PHP mode already claims ".inc" files, so you'll want to change that in
 the Preferences if you use that extension. (It also currently claims any files
@@ -136,3 +138,4 @@ blocks.
 autocomplete dictionary.
 
 [1]: https://bitbucket.org/EricFromCanada/ericfromcanada.bitbucket.org/src/default/lasso/completions-generator.lasso
+[2]: https://github.com/LassoSoft/Lasso-86-additions

@@ -317,6 +317,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.Free</key>
+		<dict>
+			<key>String</key>
+			<string>Free</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.GetAbsWidth</key>
 		<dict>
 			<key>String</key>
@@ -453,6 +462,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.Idle</key>
+		<dict>
+			<key>String</key>
+			<string>Idle</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.ImportFDF</key>
 		<dict>
 			<key>String</key>
@@ -481,6 +499,15 @@
 			<key>String</key>
 			<string>JavaScript</string>
 		</dict>
+		<key>mm.Kernel</key>
+		<dict>
+			<key>String</key>
+			<string>Kernel</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.Line</key>
 		<dict>
 			<key>String</key>
@@ -504,6 +531,15 @@
 		<dict>
 			<key>String</key>
 			<string>PageRotation</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.Populate</key>
+		<dict>
+			<key>String</key>
+			<string>Populate</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -666,6 +702,15 @@
 		<dict>
 			<key>String</key>
 			<string>TextWidth</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.Used</key>
+		<dict>
+			<key>String</key>
+			<string>Used</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -1146,10 +1191,164 @@
 			<key>String</key>
 			<string>appPrefix</string>
 		</dict>
+		<key>mm.appendArrayBegin</key>
+		<dict>
+			<key>String</key>
+			<string>appendArrayBegin</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendArrayEnd</key>
+		<dict>
+			<key>String</key>
+			<string>appendArrayEnd</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendArray</key>
+		<dict>
+			<key>String</key>
+			<string>appendArray</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendBool</key>
+		<dict>
+			<key>String</key>
+			<string>appendBool</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendBytes</key>
+		<dict>
+			<key>String</key>
+			<string>appendBytes</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.appendChar</key>
 		<dict>
 			<key>String</key>
 			<string>appendChar</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendColon</key>
+		<dict>
+			<key>String</key>
+			<string>appendColon</string>
+		</dict>
+		<key>mm.appendComma</key>
+		<dict>
+			<key>String</key>
+			<string>appendComma</string>
+		</dict>
+		<key>mm.appendDBPointer</key>
+		<dict>
+			<key>String</key>
+			<string>appendDBPointer</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendDateTime</key>
+		<dict>
+			<key>String</key>
+			<string>appendDateTime</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendDecimal</key>
+		<dict>
+			<key>String</key>
+			<string>appendDecimal</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendDocument</key>
+		<dict>
+			<key>String</key>
+			<string>appendDocument</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendInteger</key>
+		<dict>
+			<key>String</key>
+			<string>appendInteger</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendNowUTC</key>
+		<dict>
+			<key>String</key>
+			<string>appendNowUTC</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendNull</key>
+		<dict>
+			<key>String</key>
+			<string>appendNull</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendOid</key>
+		<dict>
+			<key>String</key>
+			<string>appendOid</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendRegex</key>
+		<dict>
+			<key>String</key>
+			<string>appendRegex</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendString</key>
+		<dict>
+			<key>String</key>
+			<string>appendString</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.appendTime</key>
+		<dict>
+			<key>String</key>
+			<string>appendTime</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -1243,6 +1442,15 @@
 			<key>String</key>
 			<string>arguments</string>
 		</dict>
+		<key>mm.asArrayString</key>
+		<dict>
+			<key>String</key>
+			<string>asArrayString</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.asArray</key>
 		<dict>
 			<key>String</key>
@@ -1262,20 +1470,10 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
-		<key>mm.asDecimal</key>
-		<dict>
-			<key>String</key>
-			<string>asDecimal</string>
-		</dict>
 		<key>mm.asGenerator</key>
 		<dict>
 			<key>String</key>
 			<string>asGenerator</string>
-		</dict>
-		<key>mm.asInteger</key>
-		<dict>
-			<key>String</key>
-			<string>asInteger</string>
 		</dict>
 		<key>mm.asKeyedGenerator</key>
 		<dict>
@@ -1307,15 +1505,38 @@
 			<key>String</key>
 			<string>asXML</string>
 		</dict>
+		<key>mm.ascopydeep</key>
+		<dict>
+			<key>String</key>
+			<string>ascopydeep</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.ascopy</key>
 		<dict>
 			<key>String</key>
 			<string>ascopy</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.asdecimal</key>
+		<dict>
+			<key>String</key>
+			<string>asdecimal</string>
 		</dict>
 		<key>mm.asinh</key>
 		<dict>
 			<key>String</key>
 			<string>asinh</string>
+		</dict>
+		<key>mm.asinteger</key>
+		<dict>
+			<key>String</key>
+			<string>asinteger</string>
 		</dict>
 		<key>mm.asin</key>
 		<dict>
@@ -1439,6 +1660,11 @@
 		<dict>
 			<key>String</key>
 			<string>back</string>
+		</dict>
+		<key>mm.basePaths</key>
+		<dict>
+			<key>String</key>
+			<string>basePaths</string>
 		</dict>
 		<key>mm.basename</key>
 		<dict>
@@ -1717,6 +1943,15 @@
 		<dict>
 			<key>String</key>
 			<string>bpTypeToStr</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.bucketNumber</key>
+		<dict>
+			<key>String</key>
+			<string>bucketNumber</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -2385,6 +2620,10 @@
 		<dict>
 			<key>String</key>
 			<string>code</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.colMap</key>
 		<dict>
@@ -2527,6 +2766,15 @@
 		<dict>
 			<key>String</key>
 			<string>compress</string>
+		</dict>
+		<key>mm.concat</key>
+		<dict>
+			<key>String</key>
+			<string>concat</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.condToInt</key>
 		<dict>
@@ -2763,6 +3011,15 @@
 			<key>String</key>
 			<string>cos</string>
 		</dict>
+		<key>mm.countKeys</key>
+		<dict>
+			<key>String</key>
+			<string>countKeys</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.countUsersByGroup</key>
 		<dict>
 			<key>String</key>
@@ -2804,6 +3061,15 @@
 		<dict>
 			<key>String</key>
 			<string>createDocument</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.createIndex</key>
+		<dict>
+			<key>String</key>
+			<string>createIndex</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -2936,6 +3202,15 @@
 		<dict>
 			<key>String</key>
 			<string>currentfile</string>
+		</dict>
+		<key>mm.current</key>
+		<dict>
+			<key>String</key>
+			<string>current</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.databaseColumnNames</key>
 		<dict>
@@ -3210,6 +3485,15 @@
 			<key>String</key>
 			<string>description</string>
 		</dict>
+		<key>mm.deserialize</key>
+		<dict>
+			<key>String</key>
+			<string>deserialize</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.detach</key>
 		<dict>
 			<key>String</key>
@@ -3397,6 +3681,24 @@
 		<dict>
 			<key>String</key>
 			<string>do</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.dropIndex</key>
+		<dict>
+			<key>String</key>
+			<string>dropIndex</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.drop</key>
+		<dict>
+			<key>String</key>
+			<string>drop</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -3640,6 +3942,15 @@
 		<dict>
 			<key>String</key>
 			<string>encodePassword</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.encodeValue</key>
+		<dict>
+			<key>String</key>
+			<string>encodeValue</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -3942,6 +4253,11 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.exit</key>
+		<dict>
+			<key>String</key>
+			<string>exit</string>
+		</dict>
 		<key>mm.expireMinutes</key>
 		<dict>
 			<key>String</key>
@@ -4236,6 +4552,51 @@
 			<key>String</key>
 			<string>finalize</string>
 		</dict>
+		<key>mm.findAndModify</key>
+		<dict>
+			<key>String</key>
+			<string>findAndModify</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.findBucket</key>
+		<dict>
+			<key>String</key>
+			<string>findBucket</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.findCase</key>
+		<dict>
+			<key>String</key>
+			<string>findCase</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.findDescendant</key>
+		<dict>
+			<key>String</key>
+			<string>findDescendant</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.findInCtx</key>
+		<dict>
+			<key>String</key>
+			<string>findInCtx</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.findInclude</key>
 		<dict>
 			<key>String</key>
@@ -4355,6 +4716,11 @@
 			<string>()</string>
 			<key>MoveCursor</key>
 			<string>1</string>
+		</dict>
+		<key>mm.flags</key>
+		<dict>
+			<key>String</key>
+			<string>flags</string>
 		</dict>
 		<key>mm.fliph</key>
 		<dict>
@@ -4948,6 +5314,15 @@
 		<dict>
 			<key>String</key>
 			<string>getLCAPIType</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.getLastError</key>
+		<dict>
+			<key>String</key>
+			<string>getLastError</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -5830,10 +6205,28 @@
 			<key>String</key>
 			<string>handleLassoAppResponse</string>
 		</dict>
+		<key>mm.handleNested</key>
+		<dict>
+			<key>String</key>
+			<string>handleNested</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.handleNormalConnection</key>
 		<dict>
 			<key>String</key>
 			<string>handleNormalConnection</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.handlePop</key>
+		<dict>
+			<key>String</key>
+			<string>handlePop</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -5893,6 +6286,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.handshake</key>
+		<dict>
+			<key>String</key>
+			<string>handshake</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.hasExpired</key>
 		<dict>
 			<key>String</key>
@@ -5902,6 +6304,15 @@
 		<dict>
 			<key>String</key>
 			<string>hasFeature</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.hasField</key>
+		<dict>
+			<key>String</key>
+			<string>hasField</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -6300,10 +6711,28 @@
 			<key>String</key>
 			<string>ifEmpty</string>
 		</dict>
+		<key>mm.ifKey</key>
+		<dict>
+			<key>String</key>
+			<string>ifKey</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.ifNotEmpty</key>
 		<dict>
 			<key>String</key>
 			<string>ifNotEmpty</string>
+		</dict>
+		<key>mm.ifNotKey</key>
+		<dict>
+			<key>String</key>
+			<string>ifNotKey</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.ignorecase</key>
 		<dict>
@@ -6559,6 +6988,15 @@
 			<key>String</key>
 			<string>insertFront</string>
 		</dict>
+		<key>mm.insertInternal</key>
+		<dict>
+			<key>String</key>
+			<string>insertInternal</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.insertLast</key>
 		<dict>
 			<key>String</key>
@@ -6691,6 +7129,15 @@
 		<dict>
 			<key>String</key>
 			<string>ioctl</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.isAlive</key>
+		<dict>
+			<key>String</key>
+			<string>isAlive</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -7130,6 +7577,10 @@
 		<dict>
 			<key>String</key>
 			<string>key</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.kill</key>
 		<dict>
@@ -8086,6 +8537,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.nextPrime</key>
+		<dict>
+			<key>String</key>
+			<string>nextPrime</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.nextPruneDelta</key>
 		<dict>
 			<key>String</key>
@@ -8651,6 +9111,11 @@
 			<key>String</key>
 			<string>pollIDE</string>
 		</dict>
+		<key>mm.popCtx</key>
+		<dict>
+			<key>String</key>
+			<string>popCtx</string>
+		</dict>
 		<key>mm.popInclude</key>
 		<dict>
 			<key>String</key>
@@ -8828,6 +9293,11 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.pretty</key>
+		<dict>
+			<key>String</key>
+			<string>pretty</string>
+		</dict>
 		<key>mm.previousSibling</key>
 		<dict>
 			<key>String</key>
@@ -8895,6 +9365,11 @@
 			<key>String</key>
 			<string>pullOneHeaderLine</string>
 		</dict>
+		<key>mm.pullPOST</key>
+		<dict>
+			<key>String</key>
+			<string>pullPOST</string>
+		</dict>
 		<key>mm.pullRawPOSTChunks</key>
 		<dict>
 			<key>String</key>
@@ -8923,10 +9398,14 @@
 			<key>String</key>
 			<string>pullRequest</string>
 		</dict>
-		<key>mm.pullURLPOST</key>
+		<key>mm.pushCtx</key>
 		<dict>
 			<key>String</key>
-			<string>pullURLPOST</string>
+			<string>pushCtx</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.pushInclude</key>
 		<dict>
@@ -9097,6 +9576,24 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.readMessage</key>
+		<dict>
+			<key>String</key>
+			<string>readMessage</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.readNumber</key>
+		<dict>
+			<key>String</key>
+			<string>readNumber</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.readObjectTCP</key>
 		<dict>
 			<key>String</key>
@@ -9234,6 +9731,15 @@
 		<dict>
 			<key>String</key>
 			<string>refObj</string>
+		</dict>
+		<key>mm.referrals</key>
+		<dict>
+			<key>String</key>
+			<string>referrals</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.refresh</key>
 		<dict>
@@ -9478,6 +9984,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.rename</key>
+		<dict>
+			<key>String</key>
+			<string>rename</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.renderBytes</key>
 		<dict>
 			<key>String</key>
@@ -9625,6 +10140,15 @@
 		<dict>
 			<key>String</key>
 			<string>reset</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.resize</key>
+		<dict>
+			<key>String</key>
+			<string>resize</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -9868,6 +10392,11 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.sa</key>
+		<dict>
+			<key>String</key>
+			<string>sa</string>
+		</dict>
 		<key>mm.scalb</key>
 		<dict>
 			<key>String</key>
@@ -9954,6 +10483,15 @@
 		<dict>
 			<key>String</key>
 			<string>scrubKeywords</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.searchInBucket</key>
+		<dict>
+			<key>String</key>
+			<string>searchInBucket</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -10073,6 +10611,11 @@
 			<string>()</string>
 			<key>MoveCursor</key>
 			<string>1</string>
+		</dict>
+		<key>mm.separator</key>
+		<dict>
+			<key>String</key>
+			<string>separator</string>
 		</dict>
 		<key>mm.serializationElements</key>
 		<dict>
@@ -10937,6 +11480,11 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.stack</key>
+		<dict>
+			<key>String</key>
+			<string>stack</string>
+		</dict>
 		<key>mm.standby</key>
 		<dict>
 			<key>String</key>
@@ -10970,6 +11518,15 @@
 		<dict>
 			<key>String</key>
 			<string>statement</string>
+		</dict>
+		<key>mm.stats</key>
+		<dict>
+			<key>String</key>
+			<string>stats</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.statusCode</key>
 		<dict>
@@ -11027,6 +11584,11 @@
 		<dict>
 			<key>String</key>
 			<string>stop</string>
+		</dict>
+		<key>mm.storeData</key>
+		<dict>
+			<key>String</key>
+			<string>storeData</string>
 		</dict>
 		<key>mm.stripFirstComponent</key>
 		<dict>
@@ -11173,6 +11735,20 @@
 			<string>()</string>
 			<key>MoveCursor</key>
 			<string>1</string>
+		</dict>
+		<key>mm.tableizeStackTraceLink</key>
+		<dict>
+			<key>String</key>
+			<string>tableizeStackTraceLink</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.tableizeStackTrace</key>
+		<dict>
+			<key>String</key>
+			<string>tableizeStackTrace</string>
 		</dict>
 		<key>mm.tablename</key>
 		<dict>
@@ -11552,6 +12128,15 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.update</key>
+		<dict>
+			<key>String</key>
+			<string>update</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.upload</key>
 		<dict>
 			<key>String</key>
@@ -11604,10 +12189,28 @@
 			<key>MoveCursor</key>
 			<string>1</string>
 		</dict>
+		<key>mm.validate</key>
+		<dict>
+			<key>String</key>
+			<string>validate</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
 		<key>mm.valid</key>
 		<dict>
 			<key>String</key>
 			<string>valid</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
+		</dict>
+		<key>mm.valueType</key>
+		<dict>
+			<key>String</key>
+			<string>valueType</string>
 			<key>PostString</key>
 			<string>()</string>
 			<key>MoveCursor</key>
@@ -11764,6 +12367,15 @@
 		<dict>
 			<key>String</key>
 			<string>writeId</string>
+		</dict>
+		<key>mm.writeMessage</key>
+		<dict>
+			<key>String</key>
+			<string>writeMessage</string>
+			<key>PostString</key>
+			<string>()</string>
+			<key>MoveCursor</key>
+			<string>1</string>
 		</dict>
 		<key>mm.writeObjectTCP</key>
 		<dict>
@@ -12811,6 +13423,18 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>CURLOPT_MAIL_FROM</string>
+			<key>String</key>
+			<string>CURLOPT_MAIL_FROM</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>CURLOPT_MAIL_RCPT</string>
+			<key>String</key>
+			<string>CURLOPT_MAIL_RCPT</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>CURLOPT_MAXCONNECTS</string>
 			<key>String</key>
 			<string>CURLOPT_MAXCONNECTS</string>
@@ -13465,9 +14089,105 @@
 		</dict>
 		<dict>
 			<key>ID</key>
-			<string>MySQLDS</string>
+			<string>MONGO_INSERT_CONTINUE_ON_ERROR</string>
 			<key>String</key>
-			<string>MySQLDS</string>
+			<string>MONGO_INSERT_CONTINUE_ON_ERROR</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_INSERT_NONE</string>
+			<key>String</key>
+			<string>MONGO_INSERT_NONE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_INSERT_NO_VALIDATE</string>
+			<key>String</key>
+			<string>MONGO_INSERT_NO_VALIDATE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_AWAIT_DATA</string>
+			<key>String</key>
+			<string>MONGO_QUERY_AWAIT_DATA</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_EXHAUST</string>
+			<key>String</key>
+			<string>MONGO_QUERY_EXHAUST</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_NONE</string>
+			<key>String</key>
+			<string>MONGO_QUERY_NONE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_NO_CURSOR_TIMEOUT</string>
+			<key>String</key>
+			<string>MONGO_QUERY_NO_CURSOR_TIMEOUT</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_OPLOG_REPLAY</string>
+			<key>String</key>
+			<string>MONGO_QUERY_OPLOG_REPLAY</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_PARTIAL</string>
+			<key>String</key>
+			<string>MONGO_QUERY_PARTIAL</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_SLAVE_OK</string>
+			<key>String</key>
+			<string>MONGO_QUERY_SLAVE_OK</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_QUERY_TAILABLE_CURSOR</string>
+			<key>String</key>
+			<string>MONGO_QUERY_TAILABLE_CURSOR</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_REMOVE_NONE</string>
+			<key>String</key>
+			<string>MONGO_REMOVE_NONE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_REMOVE_SINGLE_REMOVE</string>
+			<key>String</key>
+			<string>MONGO_REMOVE_SINGLE_REMOVE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_UPDATE_MULTI_UPDATE</string>
+			<key>String</key>
+			<string>MONGO_UPDATE_MULTI_UPDATE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_UPDATE_NONE</string>
+			<key>String</key>
+			<string>MONGO_UPDATE_NONE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_UPDATE_NO_VALIDATE</string>
+			<key>String</key>
+			<string>MONGO_UPDATE_NO_VALIDATE</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>MONGO_UPDATE_UPSERT</string>
+			<key>String</key>
+			<string>MONGO_UPDATE_UPSERT</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -13551,6 +14271,8 @@
 				<string>mm.getPRowCount</string>
 				<string>mm.invoke</string>
 				<string>mm.name</string>
+				<string>mm.separator</string>
+				<string>mm.storeData</string>
 			</array>
 		</dict>
 		<dict>
@@ -13816,6 +14538,12 @@
 			<string>String_ValidCharset</string>
 			<key>String</key>
 			<string>String_ValidCharset</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>Sys_Exec_Pid_To_Os_Pid</string>
+			<key>String</key>
+			<string>Sys_Exec_Pid_To_Os_Pid</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -14671,6 +15399,31 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>UsgCpu</string>
+			<key>String</key>
+			<string>UsgCpu</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.Idle</string>
+				<string>mm.Kernel</string>
+				<string>mm.Populate</string>
+				<string>mm.user</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>UsgVm</string>
+			<key>String</key>
+			<string>UsgVm</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.Free</string>
+				<string>mm.Populate</string>
+				<string>mm.Used</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>WEXITSTATUS</string>
 			<key>String</key>
 			<string>WEXITSTATUS</string>
@@ -15061,6 +15814,12 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>_ffi</string>
+			<key>String</key>
+			<string>_ffi</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>abort_clear</string>
 			<key>String</key>
 			<string>abort_clear</string>
@@ -15238,6 +15997,7 @@
 				<string>mm.size</string>
 				<string>mm.skip</string>
 				<string>mm.sort</string>
+				<string>mm.sub</string>
 				<string>mm.sum</string>
 				<string>mm.take</string>
 				<string>mm.thenByDescending</string>
@@ -15325,6 +16085,7 @@
 				<string>mm.size</string>
 				<string>mm.skip</string>
 				<string>mm.sort</string>
+				<string>mm.sub</string>
 				<string>mm.sum</string>
 				<string>mm.take</string>
 				<string>mm.thenByDescending</string>
@@ -15418,6 +16179,58 @@
 				<string>mm.oncompare</string>
 				<string>mm.serializationElements</string>
 				<string>mm.serialize</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>bson_iter</string>
+			<key>String</key>
+			<string>bson_iter</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.close</string>
+				<string>mm.findCase</string>
+				<string>mm.findDescendant</string>
+				<string>mm.find</string>
+				<string>mm.key</string>
+				<string>mm.next</string>
+				<string>mm.valueType</string>
+				<string>mm.value</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>bson</string>
+			<key>String</key>
+			<string>bson</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.appendArrayBegin</string>
+				<string>mm.appendArrayEnd</string>
+				<string>mm.appendArray</string>
+				<string>mm.appendBool</string>
+				<string>mm.appendBytes</string>
+				<string>mm.appendDBPointer</string>
+				<string>mm.appendDateTime</string>
+				<string>mm.appendDecimal</string>
+				<string>mm.appendDocument</string>
+				<string>mm.appendInteger</string>
+				<string>mm.appendNowUTC</string>
+				<string>mm.appendNull</string>
+				<string>mm.appendOid</string>
+				<string>mm.appendRegex</string>
+				<string>mm.appendString</string>
+				<string>mm.appendTime</string>
+				<string>mm.asArrayString</string>
+				<string>mm.asBytes</string>
+				<string>mm.ascopydeep</string>
+				<string>mm.ascopy</string>
+				<string>mm.asstring</string>
+				<string>mm.close</string>
+				<string>mm.concat</string>
+				<string>mm.countKeys</string>
+				<string>mm.hasField</string>
+				<string>mm.oncompare</string>
 			</array>
 		</dict>
 		<dict>
@@ -15483,6 +16296,8 @@
 				<string>mm.forEachSub</string>
 				<string>mm.getrange</string>
 				<string>mm.get</string>
+				<string>mm.ifEmpty</string>
+				<string>mm.ifNotEmpty</string>
 				<string>mm.import16bits</string>
 				<string>mm.import32bits</string>
 				<string>mm.import64bits</string>
@@ -15491,6 +16306,8 @@
 				<string>mm.importas</string>
 				<string>mm.importbytes</string>
 				<string>mm.importpointer</string>
+				<string>mm.isEmpty</string>
+				<string>mm.isNotEmpty</string>
 				<string>mm.length</string>
 				<string>mm.marker</string>
 				<string>mm.oncompare</string>
@@ -15804,7 +16621,7 @@
 			<string>client_ip</string>
 			<key>Children_ID</key>
 			<array>
-				<string>mm.asInteger</string>
+				<string>mm.asinteger</string>
 				<string>mm.asstring</string>
 				<string>mm.oncompare</string>
 			</array>
@@ -16301,8 +17118,8 @@
 				<string>mm.PM</string>
 				<string>mm.acceptDeserializedElement</string>
 				<string>mm.add</string>
-				<string>mm.asDecimal</string>
-				<string>mm.asInteger</string>
+				<string>mm.asdecimal</string>
+				<string>mm.asinteger</string>
 				<string>mm.asraw</string>
 				<string>mm.asstring</string>
 				<string>mm.businessDaysBetween</string>
@@ -16587,8 +17404,8 @@
 				<string>mm.acceptDeserializedElement</string>
 				<string>mm.acosh</string>
 				<string>mm.acos</string>
-				<string>mm.asInteger</string>
 				<string>mm.asinh</string>
+				<string>mm.asinteger</string>
 				<string>mm.asin</string>
 				<string>mm.asstring</string>
 				<string>mm.atan2</string>
@@ -16921,8 +17738,8 @@
 			<string>duration</string>
 			<key>Children_ID</key>
 			<array>
-				<string>mm.asDecimal</string>
-				<string>mm.asInteger</string>
+				<string>mm.asdecimal</string>
+				<string>mm.asinteger</string>
 				<string>mm.asraw</string>
 				<string>mm.asstring</string>
 				<string>mm.days</string>
@@ -16934,6 +17751,7 @@
 				<string>mm.millisecond</string>
 				<string>mm.minute</string>
 				<string>mm.month</string>
+				<string>mm.oncompare</string>
 				<string>mm.padZero</string>
 				<string>mm.second</string>
 				<string>mm.start</string>
@@ -18110,6 +18928,76 @@
 			<string>handle</string>
 			<key>String</key>
 			<string>handle</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>hash_Primes</string>
+			<key>String</key>
+			<string>hash_Primes</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>hash_map</string>
+			<key>String</key>
+			<string>hash_map</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.acceptDeserializedElement</string>
+				<string>mm.asArray</string>
+				<string>mm.asGenerator</string>
+				<string>mm.asKeyedGenerator</string>
+				<string>mm.asList</string>
+				<string>mm.asstaticarray</string>
+				<string>mm.asstring</string>
+				<string>mm.average</string>
+				<string>mm.bucketNumber</string>
+				<string>mm.clear</string>
+				<string>mm.contains</string>
+				<string>mm.decomposeAssignment</string>
+				<string>mm.do</string>
+				<string>mm.eachKey</string>
+				<string>mm.eachPair</string>
+				<string>mm.findBucket</string>
+				<string>mm.find</string>
+				<string>mm.forEachKey</string>
+				<string>mm.forEachPair</string>
+				<string>mm.forEach</string>
+				<string>mm.get</string>
+				<string>mm.groupBy</string>
+				<string>mm.groupJoin</string>
+				<string>mm.ifEmpty</string>
+				<string>mm.ifNotEmpty</string>
+				<string>mm.insertInternal</string>
+				<string>mm.insert</string>
+				<string>mm.invoke</string>
+				<string>mm.isEmpty</string>
+				<string>mm.isNotEmpty</string>
+				<string>mm.join</string>
+				<string>mm.keys</string>
+				<string>mm.max</string>
+				<string>mm.min</string>
+				<string>mm.nextPrime</string>
+				<string>mm.oncompare</string>
+				<string>mm.orderbydescending</string>
+				<string>mm.orderby</string>
+				<string>mm.removeall</string>
+				<string>mm.remove</string>
+				<string>mm.resize</string>
+				<string>mm.sa</string>
+				<string>mm.searchInBucket</string>
+				<string>mm.selectMany</string>
+				<string>mm.select</string>
+				<string>mm.serializationElements</string>
+				<string>mm.serialize</string>
+				<string>mm.size</string>
+				<string>mm.skip</string>
+				<string>mm.sum</string>
+				<string>mm.take</string>
+				<string>mm.thenByDescending</string>
+				<string>mm.thenBy</string>
+				<string>mm.values</string>
+				<string>mm.where</string>
+			</array>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -19644,6 +20532,12 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>http_read_headers</string>
+			<key>String</key>
+			<string>http_read_headers</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>http_read_timeout_secs</string>
 			<key>String</key>
 			<string>http_read_timeout_secs</string>
@@ -19721,11 +20615,11 @@
 				<string>mm.pullHTTPHeader</string>
 				<string>mm.pullMIMEPOST</string>
 				<string>mm.pullOneHeaderLine</string>
+				<string>mm.pullPOST</string>
 				<string>mm.pullRawPOSTChunks</string>
 				<string>mm.pullRawPOST</string>
 				<string>mm.pullRequestLine</string>
 				<string>mm.pullRequest</string>
-				<string>mm.pullURLPOST</string>
 				<string>mm.requestParams</string>
 				<string>mm.safeExport8Bits</string>
 				<string>mm.setStatus</string>
@@ -20016,9 +20910,9 @@
 			<array>
 				<string>mm.abs</string>
 				<string>mm.acceptDeserializedElement</string>
-				<string>mm.asDecimal</string>
 				<string>mm.asStringHex</string>
 				<string>mm.asStringOct</string>
+				<string>mm.asdecimal</string>
 				<string>mm.asstring</string>
 				<string>mm.bitand</string>
 				<string>mm.bitclear</string>
@@ -21279,6 +22173,8 @@
 				<string>mm.forEachSub</string>
 				<string>mm.getrange</string>
 				<string>mm.get</string>
+				<string>mm.ifEmpty</string>
+				<string>mm.ifNotEmpty</string>
 				<string>mm.import16bits</string>
 				<string>mm.import32bits</string>
 				<string>mm.import64bits</string>
@@ -21287,6 +22183,8 @@
 				<string>mm.importas</string>
 				<string>mm.importbytes</string>
 				<string>mm.importpointer</string>
+				<string>mm.isEmpty</string>
+				<string>mm.isNotEmpty</string>
 				<string>mm.length</string>
 				<string>mm.marker</string>
 				<string>mm.oncompare</string>
@@ -21356,6 +22254,8 @@
 				<string>mm.forEachSub</string>
 				<string>mm.getrange</string>
 				<string>mm.get</string>
+				<string>mm.ifEmpty</string>
+				<string>mm.ifNotEmpty</string>
 				<string>mm.import16bits</string>
 				<string>mm.import32bits</string>
 				<string>mm.import64bits</string>
@@ -21364,6 +22264,8 @@
 				<string>mm.importas</string>
 				<string>mm.importbytes</string>
 				<string>mm.importpointer</string>
+				<string>mm.isEmpty</string>
+				<string>mm.isNotEmpty</string>
 				<string>mm.length</string>
 				<string>mm.marker</string>
 				<string>mm.oncompare</string>
@@ -21682,6 +22584,42 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>json_back_slash</string>
+			<key>String</key>
+			<string>json_back_slash</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_back_space</string>
+			<key>String</key>
+			<string>json_back_space</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_close_array</string>
+			<key>String</key>
+			<string>json_close_array</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_close_object</string>
+			<key>String</key>
+			<string>json_close_object</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_colon</string>
+			<key>String</key>
+			<string>json_colon</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_comma</string>
+			<key>String</key>
+			<string>json_comma</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>json_consume_array</string>
 			<key>String</key>
 			<string>json_consume_array</string>
@@ -21706,9 +22644,87 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>json_cr</string>
+			<key>String</key>
+			<string>json_cr</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_debug</string>
+			<key>String</key>
+			<string>json_debug</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_decode</string>
+			<key>String</key>
+			<string>json_decode</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.deserialize</string>
+				<string>mm.exit</string>
+				<string>mm.handleNested</string>
+				<string>mm.handlePop</string>
+				<string>mm.readNumber</string>
+				<string>mm.readstring</string>
+				<string>mm.stack</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>json_deserialize</string>
 			<key>String</key>
 			<string>json_deserialize</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_e_lower</string>
+			<key>String</key>
+			<string>json_e_lower</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_e_upper</string>
+			<key>String</key>
+			<string>json_e_upper</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_encode</string>
+			<key>String</key>
+			<string>json_encode</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.appendColon</string>
+				<string>mm.appendComma</string>
+				<string>mm.encodeValue</string>
+				<string>mm.pretty</string>
+				<string>mm.s</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_f_lower</string>
+			<key>String</key>
+			<string>json_f_lower</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_form_feed</string>
+			<key>String</key>
+			<string>json_form_feed</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_forward_slash</string>
+			<key>String</key>
+			<string>json_forward_slash</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_lf</string>
+			<key>String</key>
+			<string>json_lf</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -21833,6 +22849,18 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>json_n_lower</string>
+			<key>String</key>
+			<string>json_n_lower</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_negative</string>
+			<key>String</key>
+			<string>json_negative</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>json_object</string>
 			<key>String</key>
 			<string>json_object</string>
@@ -21898,6 +22926,30 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>json_open_array</string>
+			<key>String</key>
+			<string>json_open_array</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_open_object</string>
+			<key>String</key>
+			<string>json_open_object</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_period</string>
+			<key>String</key>
+			<string>json_period</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_quote_double</string>
+			<key>String</key>
+			<string>json_quote_double</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>json_rpccall</string>
 			<key>String</key>
 			<string>json_rpccall</string>
@@ -21907,6 +22959,24 @@
 			<string>json_serialize</string>
 			<key>String</key>
 			<string>json_serialize</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_t_lower</string>
+			<key>String</key>
+			<string>json_t_lower</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_tab</string>
+			<key>String</key>
+			<string>json_tab</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>json_white_space</string>
+			<key>String</key>
+			<string>json_white_space</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -22267,6 +23337,18 @@
 			<string>lassoapp_mime_type_doc</string>
 			<key>String</key>
 			<string>lassoapp_mime_type_doc</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>lassoapp_mime_type_eof</string>
+			<key>String</key>
+			<string>lassoapp_mime_type_eof</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>lassoapp_mime_type_eot</string>
+			<key>String</key>
+			<string>lassoapp_mime_type_eot</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -22870,7 +23952,10 @@
 			<array>
 				<string>mm.authenticate</string>
 				<string>mm.close</string>
+				<string>mm.code</string>
 				<string>mm.open</string>
+				<string>mm.referrals</string>
+				<string>mm.results</string>
 				<string>mm.searchURL</string>
 				<string>mm.search</string>
 			</array>
@@ -23815,6 +24900,89 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>mongo_client</string>
+			<key>String</key>
+			<string>mongo_client</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.close</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mongo_collection</string>
+			<key>String</key>
+			<string>mongo_collection</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.close</string>
+				<string>mm.count</string>
+				<string>mm.createIndex</string>
+				<string>mm.dropIndex</string>
+				<string>mm.drop</string>
+				<string>mm.findAndModify</string>
+				<string>mm.find</string>
+				<string>mm.getLastError</string>
+				<string>mm.insert</string>
+				<string>mm.name</string>
+				<string>mm.remove</string>
+				<string>mm.rename</string>
+				<string>mm.save</string>
+				<string>mm.stats</string>
+				<string>mm.update</string>
+				<string>mm.validate</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mongo_cursor</string>
+			<key>String</key>
+			<string>mongo_cursor</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.close</string>
+				<string>mm.current</string>
+				<string>mm.isAlive</string>
+				<string>mm.next</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mustache_compile_file</string>
+			<key>String</key>
+			<string>mustache_compile_file</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mustache_compile_string</string>
+			<key>String</key>
+			<string>mustache_compile_string</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mustache_ctx</string>
+			<key>String</key>
+			<string>mustache_ctx</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.basePaths</string>
+				<string>mm.findInCtx</string>
+				<string>mm.find</string>
+				<string>mm.ifKey</string>
+				<string>mm.ifNotKey</string>
+				<string>mm.popCtx</string>
+				<string>mm.pushCtx</string>
+				<string>mm.values</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mustache_include</string>
+			<key>String</key>
+			<string>mustache_include</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>mysql_session_driver_impl</string>
 			<key>String</key>
 			<string>mysql_session_driver_impl</string>
@@ -23858,6 +25026,12 @@
 				<string>mm.tb</string>
 				<string>mm.validateSessionsTable</string>
 			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>mysqlds</string>
+			<key>String</key>
+			<string>mysqlds</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -25984,6 +27158,7 @@
 			<key>Children_ID</key>
 			<array>
 				<string>mm.doccomment</string>
+				<string>mm.flags</string>
 				<string>mm.methodname</string>
 				<string>mm.paramdescs</string>
 				<string>mm.restname</string>
@@ -26715,6 +27890,12 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>sys_daemon</string>
+			<key>String</key>
+			<string>sys_daemon</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>sys_databasesPath</string>
 			<key>String</key>
 			<string>sys_databasesPath</string>
@@ -26967,6 +28148,12 @@
 		</dict>
 		<dict>
 			<key>ID</key>
+			<string>sys_library</string>
+			<key>String</key>
+			<string>sys_library</string>
+		</dict>
+		<dict>
+			<key>ID</key>
 			<string>sys_listtraits</string>
 			<key>String</key>
 			<string>sys_listtraits</string>
@@ -26982,6 +28169,12 @@
 			<string>sys_listunboundmethods</string>
 			<key>String</key>
 			<string>sys_listunboundmethods</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>sys_load_dynamic_library</string>
+			<key>String</key>
+			<string>sys_load_dynamic_library</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -27161,6 +28354,12 @@
 			<string>sys_userStartupPath</string>
 			<key>String</key>
 			<string>sys_userStartupPath</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>sys_version</string>
+			<key>String</key>
+			<string>sys_version</string>
 		</dict>
 		<dict>
 			<key>ID</key>
@@ -28516,6 +29715,8 @@
 				<string>mm.setHeaders</string>
 				<string>mm.setStatus</string>
 				<string>mm.splitDebuggingThread</string>
+				<string>mm.tableizeStackTraceLink</string>
+				<string>mm.tableizeStackTrace</string>
 				<string>mm.tryFindErrorFile</string>
 			</array>
 		</dict>
@@ -28587,6 +29788,8 @@
 				<string>mm.setHeaders</string>
 				<string>mm.setStatus</string>
 				<string>mm.splitDebuggingThread</string>
+				<string>mm.tableizeStackTraceLink</string>
+				<string>mm.tableizeStackTrace</string>
 				<string>mm.tryFindErrorFile</string>
 			</array>
 		</dict>
@@ -28617,6 +29820,27 @@
 				<string>mm.rule</string>
 				<string>mm.shouldAbort</string>
 				<string>mm.trigger</string>
+			</array>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>websocket_handler_timeout</string>
+			<key>String</key>
+			<string>websocket_handler_timeout</string>
+		</dict>
+		<dict>
+			<key>ID</key>
+			<string>websocket_handler</string>
+			<key>String</key>
+			<string>websocket_handler</string>
+			<key>Children_ID</key>
+			<array>
+				<string>mm.close</string>
+				<string>mm.doWithClose</string>
+				<string>mm.handshake</string>
+				<string>mm.readMessage</string>
+				<string>mm.version</string>
+				<string>mm.writeMessage</string>
 			</array>
 		</dict>
 		<dict>
