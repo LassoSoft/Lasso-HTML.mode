@@ -139,7 +139,7 @@
 			<find>(?i)\Alocal </find>
 			<replace>#</replace>
 			<find>(?i)\Avar(?:iable)? </find>
-			<replace>$</replace>
+			<replace>\$</replace>
 		</postprocess>
 	</symbol>
 
